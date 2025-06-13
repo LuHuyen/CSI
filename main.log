@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.17)  13 JUN 2025 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.17)  13 JUN 2025 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -157,6 +157,12 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen165
 \Gin@req@width=\dimen166
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
  (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -319,6 +325,7 @@ Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
 Package xcolor Info: Model `RGB' extended on input line 1368.
@@ -470,8 +477,8 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 \t@pgfplotstable@a=\toks39
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
 \c@pgfplotslibrarysurf@no=\count319
- (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen278
 \pgfdecoratedremainingdistance=\dimen279
 \pgfdecoratedinputsegmentcompleteddistance=\dimen280
@@ -501,31 +508,31 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Info: Redefining \degres on input line 18.
-LaTeX Info: Redefining \up on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Info: Redefining \degres on input line 19.
+LaTeX Info: Redefining \up on input line 19.
 
 
 Package french.ldf Warning: OT1 encoding should not be used for French.
 (french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(french.ldf)                of your document; reported on input line 18.
+(french.ldf)                of your document; reported on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -580,7 +587,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 18.
+Package hyperref Info: Link coloring ON on input line 19.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -590,9 +597,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count329
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -600,11 +607,11 @@ LaTeX Info: Redefining \nameref on input line 18.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -616,7 +623,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 \chapter
+l.25 \chapter
              {Introduction de la thèse} [1
 
 ]
@@ -626,45 +633,135 @@ Chapitre 1.
 ]
 Chapitre 2.
 
-Overfull \hbox (3.44975pt too wide) in paragraph at lines 36--37
+Overfull \hbox (3.44975pt too wide) in paragraph at lines 38--39
 []\OT1/cmr/m/n/12 Th^^Rese : Mod^^Selisation multi-^^Sechelle des mat^^Seriaux gra-nu-laires frottant-coh^^Sesifs :
- []
-
-
-Overfull \hbox (69.43597pt too wide) in paragraph at lines 42--43
-[]\OT1/cmr/m/n/12 V. Ri-che-feu, G. Combe, MPM\TS1/cmr/m/n/12 �\OT1/cmr/m/n/12 DEM pro-gramme, https ://gi-thub.com/richefeu/mpmxdem
  []
 
 [3
 
 ]
 Chapitre 3.
-(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex File ignored)
-<frog.jpg, id=144, 748.7975pt x 741.77126pt>
-File: frog.jpg Graphic file (type jpg)
-<use frog.jpg>
-Package pdftex.def Info: frog.jpg  used on input line 94.
-(pdftex.def)             Requested size: 128.0387pt x 126.83514pt.
- [4
-
-] [5 <./frog.jpg>]
-Chapitre 4.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 146.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mu' on input line 146.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 146.
-
-(./mu_I_fit.tex
+(./Deplacement_Poutre.tex
 \gptboxheight=\skip53
 \gptboxwidth=\skip54
 \gptboxtext=\box66
+Package epstopdf Info: Source file: <./Deplacement_Poutre.eps>
+(epstopdf)                    date: 2025-06-13 17:44:05
+(epstopdf)                    size: 29640 bytes
+(epstopdf)             Output file: <./Deplacement_Poutre-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-13 17:43:35
+(epstopdf)                    size: 13853 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Deplacement_Poutre-eps-converted-to.pdf ./Deplacement_Poutre.eps>
+(epstopdf)             \includegraphics on input line 124.
+runsystem(repstopdf --outfile=./Deplacement_Poutre-eps-converted-to.pdf ./Deplacement_Poutre.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <./Deplacement_Poutre-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-13 17:44:19
+(epstopdf)                    size: 13853 bytes.
+<./Deplacement_Poutre-eps-converted-to.pdf, id=147, 361.35pt x 252.945pt>
+File: ./Deplacement_Poutre-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Deplacement_Poutre-eps-converted-to.pdf>
+Package pdftex.def Info: ./Deplacement_Poutre-eps-converted-to.pdf  used on input line 124.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+)
+<frog.jpg, id=148, 748.7975pt x 741.77126pt>
+File: frog.jpg Graphic file (type jpg)
+<use frog.jpg>
+Package pdftex.def Info: frog.jpg  used on input line 95.
+(pdftex.def)             Requested size: 128.0387pt x 126.83514pt.
+ [4
+
+] [5 <./Deplacement_Poutre-eps-converted-to.pdf> <./frog.jpg>] [6]
+Chapitre 4.
+(./RapportVides.tex
+Package epstopdf Info: Source file: <./RapportVides.eps>
+(epstopdf)                    date: 2025-05-28 13:48:12
+(epstopdf)                    size: 40944 bytes
+(epstopdf)             Output file: <./RapportVides-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-13 16:16:40
+(epstopdf)                    size: 15738 bytes
+(epstopdf)             Command: <repstopdf --outfile=./RapportVides-eps-converted-to.pdf ./RapportVides.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+<./RapportVides-eps-converted-to.pdf, id=193, 361.35pt x 252.945pt>
+File: ./RapportVides-eps-converted-to.pdf Graphic file (type pdf)
+<use ./RapportVides-eps-converted-to.pdf>
+Package pdftex.def Info: ./RapportVides-eps-converted-to.pdf  used on input line 132.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+) (./NombreCoordination.tex
+Package epstopdf Info: Source file: <./NombreCoordination.eps>
+(epstopdf)                    date: 2025-05-28 13:48:12
+(epstopdf)                    size: 43442 bytes
+(epstopdf)             Output file: <./NombreCoordination-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-13 16:16:40
+(epstopdf)                    size: 16190 bytes
+(epstopdf)             Command: <repstopdf --outfile=./NombreCoordination-eps-converted-to.pdf ./NombreCoordination.eps>
+(epstopdf)             \includegraphics on input line 138.
+Package epstopdf Info: Output file is already uptodate.
+<./NombreCoordination-eps-converted-to.pdf, id=194, 361.35pt x 252.945pt>
+File: ./NombreCoordination-eps-converted-to.pdf Graphic file (type pdf)
+<use ./NombreCoordination-eps-converted-to.pdf>
+Package pdftex.def Info: ./NombreCoordination-eps-converted-to.pdf  used on input line 138.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+) (./Test.tex
+Package epstopdf Info: Source file: <./Test.eps>
+(epstopdf)                    date: 2025-05-28 15:32:24
+(epstopdf)                    size: 336512 bytes
+(epstopdf)             Output file: <./Test-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-13 16:16:41
+(epstopdf)                    size: 162658 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Test-eps-converted-to.pdf ./Test.eps>
+(epstopdf)             \includegraphics on input line 150.
+Package epstopdf Info: Output file is already uptodate.
+<./Test-eps-converted-to.pdf, id=195, 361.35pt x 252.945pt>
+File: ./Test-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Test-eps-converted-to.pdf>
+Package pdftex.def Info: ./Test-eps-converted-to.pdf  used on input line 150.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+) (./Transitoire.tex
+Package epstopdf Info: Source file: <Transitoire.eps>
+(epstopdf)                    date: 2025-05-28 15:32:25
+(epstopdf)                    size: 31478 bytes
+(epstopdf)             Output file: <Transitoire-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-13 16:16:41
+(epstopdf)                    size: 6859 bytes
+(epstopdf)             Command: <repstopdf --outfile=Transitoire-eps-converted-to.pdf Transitoire.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+<Transitoire-eps-converted-to.pdf, id=196, 361.35pt x 252.945pt>
+File: Transitoire-eps-converted-to.pdf Graphic file (type pdf)
+<use Transitoire-eps-converted-to.pdf>
+Package pdftex.def Info: Transitoire-eps-converted-to.pdf  used on input line 121.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+) (./Résiduel.tex
+Package epstopdf Info: Source file: <Résiduel.eps>
+(epstopdf)                    date: 2025-05-28 15:32:25
+(epstopdf)                    size: 32304 bytes
+(epstopdf)             Output file: <Résiduel-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-13 16:16:42
+(epstopdf)                    size: 7368 bytes
+(epstopdf)             Command: <repstopdf --outfile=Résiduel-eps-converted-to.pdf Résiduel.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
+<Résiduel-eps-converted-to.pdf, id=197, 361.35pt x 252.945pt>
+File: Résiduel-eps-converted-to.pdf Graphic file (type pdf)
+<use Résiduel-eps-converted-to.pdf>
+Package pdftex.def Info: Résiduel-eps-converted-to.pdf  used on input line 120.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 182.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mu' on input line 182.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 182.
+
+(./mu_I_fit.tex
 Package epstopdf Info: Source file: <./mu_I_fit.eps>
 (epstopdf)                    date: 2025-06-02 15:55:56
 (epstopdf)                    size: 20978 bytes
@@ -674,7 +771,7 @@ Package epstopdf Info: Source file: <./mu_I_fit.eps>
 (epstopdf)             Command: <repstopdf --outfile=./mu_I_fit-eps-converted-to.pdf ./mu_I_fit.eps>
 (epstopdf)             \includegraphics on input line 127.
 Package epstopdf Info: Output file is already uptodate.
-<./mu_I_fit-eps-converted-to.pdf, id=178, 361.35pt x 252.945pt>
+<./mu_I_fit-eps-converted-to.pdf, id=198, 361.35pt x 252.945pt>
 File: ./mu_I_fit-eps-converted-to.pdf Graphic file (type pdf)
 <use ./mu_I_fit-eps-converted-to.pdf>
 Package pdftex.def Info: ./mu_I_fit-eps-converted-to.pdf  used on input line 127.
@@ -689,12 +786,14 @@ Package epstopdf Info: Source file: <./Pack_I_fit.eps>
 (epstopdf)             Command: <repstopdf --outfile=./Pack_I_fit-eps-converted-to.pdf ./Pack_I_fit.eps>
 (epstopdf)             \includegraphics on input line 128.
 Package epstopdf Info: Output file is already uptodate.
-<./Pack_I_fit-eps-converted-to.pdf, id=179, 361.35pt x 252.945pt>
+<./Pack_I_fit-eps-converted-to.pdf, id=199, 361.35pt x 252.945pt>
 File: ./Pack_I_fit-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Pack_I_fit-eps-converted-to.pdf>
 Package pdftex.def Info: ./Pack_I_fit-eps-converted-to.pdf  used on input line 128.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./Q_mu.tex
+) [7
+
+] [8 <./RapportVides-eps-converted-to.pdf> <./NombreCoordination-eps-converted-to.pdf>] [9 <./Test-eps-converted-to.pdf> <./Transitoire-eps-converted-to.pdf>] [10 <./Résiduel-eps-converted-to.pdf> <./mu_I_fit-eps-converted-to.pdf>] (./Q_mu.tex
 Package epstopdf Info: Source file: <./Q_mu.eps>
 (epstopdf)                    date: 2025-06-02 15:55:56
 (epstopdf)                    size: 21304 bytes
@@ -704,32 +803,30 @@ Package epstopdf Info: Source file: <./Q_mu.eps>
 (epstopdf)             Command: <repstopdf --outfile=./Q_mu-eps-converted-to.pdf ./Q_mu.eps>
 (epstopdf)             \includegraphics on input line 131.
 Package epstopdf Info: Output file is already uptodate.
-<./Q_mu-eps-converted-to.pdf, id=181, 361.35pt x 252.945pt>
+<./Q_mu-eps-converted-to.pdf, id=233, 361.35pt x 252.945pt>
 File: ./Q_mu-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Q_mu-eps-converted-to.pdf>
 Package pdftex.def Info: ./Q_mu-eps-converted-to.pdf  used on input line 131.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./main.bbl [6
-
-] [7 <./mu_I_fit-eps-converted-to.pdf> <./Pack_I_fit-eps-converted-to.pdf>] [8 <./Q_mu-eps-converted-to.pdf>]) [9
+) (./main.bbl [11 <./Pack_I_fit-eps-converted-to.pdf>] [12 <./Q_mu-eps-converted-to.pdf>]) [13
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DEBB0D01B90EDD7664C764DD78331D96;3963.
  ) 
 Here is how much of TeX's memory you used:
- 32177 strings out of 478287
- 746746 string characters out of 5849289
- 1184216 words of memory out of 5000000
- 49799 multiletter control sequences out of 15000+600000
- 482408 words of font info for 78 fonts, out of 8000000 for 9000
+ 32447 strings out of 478287
+ 753488 string characters out of 5849289
+ 1195260 words of memory out of 5000000
+ 50039 multiletter control sequences out of 15000+600000
+ 482230 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,89p,759b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (10 pages, 280717 bytes).
+ 84i,12n,89p,759b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (14 pages, 498802 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 217 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 340 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 247 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,6 +7,7 @@
 % Useful packages
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{graphicx}
+\usepackage{color}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -23,6 +24,7 @@
 
 \chapter{Introduction de la thèse}
 
+
 \chapter{Bibliographie}
 \section{MPM}
 \begin{itemize}
@@ -32,14 +34,14 @@
 \end{itemize}
 \section{DEM}
 \begin{itemize}
-      \item DEM-Lecture-Version2023 - Gaël COMBE
+      \item \cite{combe2023demlecture}
       \item Thèse: Modélisation multi-échelle des matériaux granulaires frottant-cohésifs: Trung Kien NGUYEN
 \end{itemize}
 
 \section{Couplage MPMxDEM}
 \begin{itemize}
       \item Thèse: Application de la Méthode des Points Matériels aux phénomènes gravitaires - Fabio GRACIA DANIES
-      \item V. Richefeu, G. Combe, MPM×DEM programme, https://github.com/richefeu/mpmxdem (2025)
+      \item \cite{richefeu2025mpmxdem}
 \end{itemize}
 \section{Corrélation}
 
@@ -65,9 +67,8 @@
 \subsubsection{Discrétisation du maillage}
 \subsubsection{Comparaison entre calcul théorique et numérique}
                                 \begin{figure}
-                                    \centering
-                                    \scalebox{0.5}{\input{}}
-                                    \caption{Cercle transitore (pic)}
+                                   \small \input{Deplacement_Poutre.tex}
+                                    \caption{Déplacement du poutre en Y-axis}
                                 \end{figure}
 \subsection{Étude sur le cas dynamique}
 
@@ -125,6 +126,41 @@ You can make lists with automatic numbering \dots
 \end{itemize}
 \chapter{Conclusion}
 
+                                \begin{figure}
+                                  \small
+                                  \input{RapportVides.tex}
+                                    \caption{L'indice de vide}
+                                \end{figure}
+                                    
+                                \begin{figure}
+                                   \input{NombreCoordination.tex}
+                                    \caption{Nombre de coordination}
+                                \end{figure}
+
+                                Vitesse imposée est élevée $\rightarrow$ Contrainte de confinement et l'indice de vide sont instables
+
+     
+                                \begin{figure}
+                                    \input{Test.tex}
+                                    \caption{Contrainte-Déformation}
+                                \end{figure}
+                                J'ai choisi $\varepsilon_{yy} = 70\%$ pour réaliser des pré-études sur la rhéologie $\mu(I)$ (considéré comme l'état critique). 
+
+
+                                \begin{figure}
+                                  \input{Transitoire.tex}
+                                    \caption{Cercle transitore (pic)}
+                                \end{figure}
+
+                                    $\varphi = 28.77^\circ \div 39.53^\circ $
+
+
+                                \begin{figure}
+                                    \input{Résiduel.tex}
+                                    \caption{Cercle résiduel ($\varepsilon_{yy} = 70\%$)}
+                                \end{figure}
+                                    $\varphi = 16.56^\circ \div 22.78^\circ $
+                                    
 \section{Comparaison des équations utilisées}
 
 Expérimental : 
@@ -198,19 +234,10 @@ Les coefficients $\xi,\ C,\ \Phi_0$ sont déterminés empiriquement ($\xi \appro
     \caption{$\mu(Q)$ avec $Q = f(\Phi_0, I)$}
 \end{figure}
 
-
-\bibliographystyle{alpha}
-\bibliography{sample}
-
-% Example citation to avoid "I found no \citation commands" error
-\nocite{*}
+\bibliographystyle{plain}
+\bibliography{Bibliographie}
 
 
 \end{document}
 
 
-% \subsection{How to add Citations and a References List}
-
-% You can simply upload a \verb|.bib| file containing your BibTeX entries, created with a tool such as JabRef. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
-
-% If you have an \href{https://www.overleaf.com/user/subscription/plans}{upgraded account}, you can also import your Mendeley or Zotero library directly as a \verb|.bib| file, via the upload menu in the file-tree.
