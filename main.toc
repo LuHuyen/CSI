@@ -31,4 +31,10 @@
 \contentsline {subsection}{\numberline {3.2.3}Recherche sur l'impact dynamique}{5}{subsection.3.2.3}%
 \contentsline {subsubsection}{\numberline {3.2.3.1}Augmentation du nombre d'inertie (Montée la vitesse imposée)}{5}{subsubsection.3.2.3.1}%
 \contentsline {section}{\numberline {3.3}Couplage\ldots }{5}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}How to add Tables}{5}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}How to add Lists}{5}{subsection.3.3.2}%
 \contentsline {chapter}{\numberline {4}Conclusion}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Comparaison des équations utilisées}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Rhéologie $\mu (I)$ résiduel}{6}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Première méthode}{6}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Deuxième méthode}{6}{subsection.4.2.2}%

@@ -8,6 +8,9 @@
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 
 \title{Rapport d'activités}
 \author{Viet Anh QUACH}
@@ -25,7 +28,7 @@
 \begin{itemize}
 \item Thèse: Application de la Méthode des Points Matériels aux phénomènes gravitaires - Fabio GRACIA DANIES
 \item A multi-scale, MPMxDEM, numerical modelling approach for geotechnical structures under severe loading - Sacha Duverger
-\item Material Point Method - Vinh Phu NGUYEN, Alban de Vaucorbeil, Stephane Bordas
+\item Material Point Method -- Vinh Phu NGUYEN, Alban de Vaucorbeil, Stephane Bordas
 \end{itemize}
 \section{DEM}
 \begin{itemize}
@@ -61,7 +64,13 @@
 \subsubsection{Longueur encastrée}
 \subsubsection{Discrétisation du maillage}
 \subsubsection{Comparaison entre calcul théorique et numérique}
+                                \begin{figure}
+                                    \centering
+                                    \scalebox{0.5}{\input{}}
+                                    \caption{Cercle transitore (pic)}
+                                \end{figure}
 \subsection{Étude sur le cas dynamique}
+
 
 \section{Simulation DEM: Compression triaxiale}
 \subsection{Le processus et les paramètres}
@@ -80,89 +89,128 @@
 \subsection{Recherche sur l'impact dynamique}
 
 \subsubsection{Augmentation du nombre d'inertie (Montée la vitesse imposée)}
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{frog.jpg}
+\caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
+\end{figure}
 
 \section{Couplage\ldots}
+\subsection{How to add Tables}
 
+Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}. 
+
+\begin{table}
+\centering
+\begin{tabular}{l|r}
+Item & Quantity \\\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\caption{\label{tab:widgets}An example table.}
+\end{table}
+
+\subsection{How to add Lists}
+
+You can make lists with automatic numbering \dots
+
+\begin{enumerate}
+\item Like this,
+\item and like this.
+\end{enumerate}
+\dots or bullet points \dots
+\begin{itemize}
+\item Like this,
+\item and like this.
+\end{itemize}
 \chapter{Conclusion}
+
+\section{Comparaison des équations utilisées}
+
+Expérimental : 
+\[
+I =  \frac{\dot{\varepsilon} \cdot \bar{a}}{\sqrt{\sigma_{33}/\rho_s}}; \quad \mu = \sin(\varphi)
+\]
+
+Simulation : 
+\[
+I = \dot{\varepsilon} \times \sqrt {\frac{m}{\sigma_{33}\times \bar{a}}}  
+= \dot{\varepsilon} \times \sqrt {\frac{\frac{4}{3} \pi \frac{\bar{a}^3}{8} \times \rho_s}{\sigma_{33}\times \bar{a}}} 
+= \dot{\varepsilon} \times \sqrt{\frac{\pi}{6}} \sqrt {\frac{\bar{a}^2 \rho_s}{\sigma_{33}}} 
+= \boxed{\sqrt{\frac{\pi}{6}}} \times \frac{\dot{\varepsilon} \cdot \bar{a}}{\sqrt{\sigma_{33}/\rho_s}}
+\]
+\[
+\mu = \tan(\varphi)
+\]
+
+\section{Rhéologie $\mu(I)$ résiduel}
+
+\subsection{Première méthode}
+
+La première méthode utilise les équations suivantes :
+\[
+\mu(I) = \mu_s + \frac{\mu_2 - \mu_s}{1 + \frac{I_0}{I}}
+\]
+\[
+\Phi(I) = \Phi^{\max} - bI
+\]
+
+Les coefficients $\mu_s,\ \mu_2,\ I_0,\ \Phi_{\max},\ b$ sont déterminés empiriquement.
+
+\begin{figure}
+    \centering
+    {\small
+        \input{mu_I_fit.tex}
+    }
+    \caption{$\mu(I)$ ($\varepsilon_{yy} = 70\%$)}
+\end{figure}
+
+\begin{figure}
+    \centering
+    {\small
+        \input{Pack_I_fit.tex}
+    }
+    \caption{$\Phi(I)$ ($\varepsilon_{yy} = 70\%$)}
+\end{figure}
+
+\subsection{Deuxième méthode}
+
+La deuxième méthode, proposée dans l'article 
+\href{https://link-springer-com.sid2nomade-1.grenet.fr/article/10.1007/s10035-024-01459-7}{Scaling laws for quasi-statically deforming granular soil at critical state [2024] (Fei, Jianbo et al.)}, 
+introduit un nombre d'inertie quasi-statique $Q$ qui tient compte du degré de compaction $\Phi_0$ :
+
+\[
+Q = \left[ \Phi_0  \ln \left( I \right) + \alpha \right]
+\]
+où $\alpha = 30$.
+
+\[
+\mu = \xi Q + C
+\]
+
+Les coefficients $\xi,\ C,\ \Phi_0$ sont déterminés empiriquement ($\xi \approx 0.06$ et $C \approx 0.2$).
+
+\begin{figure}
+    \centering
+    {\small
+        \input{Q_mu.tex}
+    }
+    \caption{$\mu(Q)$ avec $Q = f(\Phi_0, I)$}
+\end{figure}
+
 
 \bibliographystyle{alpha}
 \bibliography{sample}
 
+% Example citation to avoid "I found no \citation commands" error
+\nocite{*}
+
+
 \end{document}
 
-
-% First you have to upload the image file from your computer using the upload link in the file-tree menu. Then use the includegraphics command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for Figure \ref{fig:frog} in this section for an example.
-
-% Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in this help article on \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{including images on Overleaf}.
-
-% \begin{figure}
-% \centering
-% \includegraphics[width=0.3\textwidth]{frog.jpg}
-% \caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
-% \end{figure}
-
-% \subsection{How to add Tables}
-
-% Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}. 
-
-% \begin{table}
-% \centering
-% \begin{tabular}{l|r}
-% Item & Quantity \\\hline
-% Widgets & 42 \\
-% Gadgets & 13
-% \end{tabular}
-% \caption{\label{tab:widgets}An example table.}
-% \end{table}
-
-% \subsection{How to add Comments and Track Changes}
-
-% Comments can be added to your project by highlighting some text and clicking ``Add comment'' in the top right of the editor pane. To view existing comments, click on the Review menu in the toolbar above. To reply to a comment, click on the Reply button in the lower right corner of the comment. You can close the Review pane by clicking its name on the toolbar when you're done reviewing for the time being.
-
-% Track changes are available on all our \href{https://www.overleaf.com/user/subscription/plans}{premium plans}, and can be toggled on or off using the option at the top of the Review pane. Track changes allow you to keep track of every change made to the document, along with the person making the change. 
-
-% \subsection{How to add Lists}
-
-% You can make lists with automatic numbering \dots
-
-% \begin{enumerate}
-% \item Like this,
-% \item and like this.
-% \end{enumerate}
-% \dots or bullet points \dots
-% \begin{itemize}
-% \item Like this,
-% \item and like this.
-% \end{itemize}
-
-% \subsection{How to write Mathematics}
-
-% \LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-% \[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-%       = \frac{1}{n}\sum_{i}^{n} X_i\]
-% denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
-
-
-% \subsection{How to change the margins and paper size}
-
-% Usually the template you're using will have the page margins and paper size set correctly for that use-case. For example, if you're using a journal article template provided by the journal publisher, that template will be formatted according to their requirements. In these cases, it's best not to alter the margins directly.
-
-% If however you're using a more general template, such as this one, and would like to alter the margins, a common way to do so is via the geometry package. You can find the geometry package loaded in the preamble at the top of this example file, and if you'd like to learn more about how to adjust the settings, please visit this help article on \href{https://www.overleaf.com/learn/latex/page_size_and_margins}{page size and margins}.
-
-% \subsection{How to change the document language and spell check settings}
-
-% Overleaf supports many different languages, including multiple different languages within one document. 
-
-% To configure the document language, simply edit the option provided to the babel package in the preamble at the top of this example project. To learn more about the different options, please visit this help article on \href{https://www.overleaf.com/learn/latex/International_language_support}{international language support}.
-
-% To change the spell check language, simply open the Overleaf menu at the top left of the editor window, scroll down to the spell check setting, and adjust accordingly.
 
 % \subsection{How to add Citations and a References List}
 
 % You can simply upload a \verb|.bib| file containing your BibTeX entries, created with a tool such as JabRef. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
 
 % If you have an \href{https://www.overleaf.com/user/subscription/plans}{upgraded account}, you can also import your Mendeley or Zotero library directly as a \verb|.bib| file, via the upload menu in the file-tree.
-
-% \subsection{Good luck!}
-
-% We hope you find Overleaf useful, and do take a look at our \href{https://www.overleaf.com/learn}{help library} for more tutorials and user guides! Please also let us know if you have any feedback using the Contact Us link at the bottom of the Overleaf menu --- or use the contact form at \url{https://www.overleaf.com/contact}.

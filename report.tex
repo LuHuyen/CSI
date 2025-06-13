@@ -1,0 +1,75 @@
+
+\section{Comparaison des équations utilisées}
+
+Expérimental : 
+\[
+I =  \frac{\dot{\varepsilon} \cdot \bar{a}}{\sqrt{\sigma_{33}/\rho_s}}; \quad \mu = \sin(\varphi)
+\]
+
+Simulation : 
+\[
+I = \dot{\varepsilon} \times \sqrt {\frac{m}{\sigma_{33}\times \bar{a}}}  
+= \dot{\varepsilon} \times \sqrt {\frac{\frac{4}{3} \pi \frac{\bar{a}^3}{8} \times \rho_s}{\sigma_{33}\times \bar{a}}} 
+= \dot{\varepsilon} \times \sqrt{\frac{\pi}{6}} \sqrt {\frac{\bar{a}^2 \rho_s}{\sigma_{33}}} 
+= \boxed{\sqrt{\frac{\pi}{6}}} \times \frac{\dot{\varepsilon} \cdot \bar{a}}{\sqrt{\sigma_{33}/\rho_s}}
+\]
+\[
+\mu = \tan(\varphi)
+\]
+
+\section{Rhéologie $\mu(I)$ résiduel}
+
+\subsection{Première méthode}
+
+La première méthode utilise les équations suivantes :
+\[
+\mu(I) = \mu_s + \frac{\mu_2 - \mu_s}{1 + \frac{I_0}{I}}
+\]
+\[
+\Phi(I) = \Phi^{\max} - bI
+\]
+
+Les coefficients $\mu_s,\ \mu_2,\ I_0,\ \Phi_{\max},\ b$ sont déterminés empiriquement.
+
+\begin{figure}
+    \centering
+    {\small
+        \input{mu_I_fit.tex}
+    }
+    \caption{$\mu(I)$ ($\varepsilon_{yy} = 70\%$)}
+\end{figure}
+
+\begin{figure}
+    \centering
+    {\small
+        \input{Pack_I_fit.tex}
+    }
+    \caption{$\Phi(I)$ ($\varepsilon_{yy} = 70\%$)}
+\end{figure}
+
+\subsection{Deuxième méthode}
+
+La deuxième méthode, proposée dans l'article 
+\href{https://link-springer-com.sid2nomade-1.grenet.fr/article/10.1007/s10035-024-01459-7}{Scaling laws for quasi-statically deforming granular soil at critical state [2024] (Fei, Jianbo et al.)}, 
+introduit un nombre d'inertie quasi-statique $Q$ qui tient compte du degré de compaction $\Phi_0$ :
+
+\[
+Q = \left[ \Phi_0  \ln \left( I \right) + \alpha \right]
+\]
+où $\alpha = 30$.
+
+\[
+\mu = \xi Q + C
+\]
+
+Les coefficients $\xi,\ C,\ \Phi_0$ sont déterminés empiriquement ($\xi \approx 0.06$ et $C \approx 0.2$).
+
+\begin{figure}
+    \centering
+    {\small
+        \input{Q_mu.tex}
+    }
+    \caption{$\mu(Q)$ avec $Q = f(\Phi_0, I)$}
+\end{figure}
+
+\end{document}
