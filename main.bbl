@@ -6,9 +6,25 @@ Gaël Combe.
 \newblock \url{https://cloud.univ-grenoble-alpes.fr/s/Lbdg6qWwXNqFZQo}, 2023.
 \newblock Diapositive.
 
+\bibitem{nguyen2013modelisation}
+Trung~Kien Nguyen.
+\newblock {\em Mod{\'e}lisation multi-{\'e}chelle des mat{\'e}riaux granulaires
+  frottant-coh{\'e}sifs}.
+\newblock PhD thesis, Universit{\'e} de Grenoble, 2013.
+
+\bibitem{nguyen2014fem}
+Trung~Kien Nguyen, Ga{\"e}l Combe, Denis Caillerie, and Jacques Desrues.
+\newblock Fem$\times$ dem modelling of cohesive granular materials: numerical
+  homogenisation and multi-scale simulations.
+\newblock {\em Acta Geophysica}, 62:1109--1126, 2014.
+
 \bibitem{richefeu2025mpmxdem}
 V.~Richefeu and G.~Combe.
 \newblock {MPM}{×}{DEM} programme.
 \newblock \url{https://github.com/richefeu/mpmxdem}, 2025.
+
+\bibitem{projetderecherche}
+V.~Richefeu, G.~Combe, and T.K. Nguyen.
+\newblock Projet de reserche, 2024.
 
 \end{thebibliography}

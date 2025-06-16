@@ -11,7 +11,11 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{3d,calc}
 \pgfplotsset{compat=1.18}
+\usepackage[utf8]{inputenc}
+\usepackage{cleveref}
 
 \title{Rapport d'activités}
 \author{Viet Anh QUACH}
@@ -23,9 +27,32 @@
 \setcounter{secnumdepth}{4}
 
 \chapter{Introduction de la thèse}
+% 
+À cause du changement climatique, les risques naturels concernant l'écoulement gravitaire sur les zones montagneuses sont déclenchés de plus en plus fréquent à notre époque. 
+Récemmement, Le village de Blatten, dans les Alpes suisses est rayé de la carte sous l'effet de L’éboulement du glacier le 29 mai 2025. 
+Malhereusement, la caractéristique mécanique de ces écoulements gravitaires, reste mal comprise. 
+Donc, mon projet de thèse, " Homogénéisation numérique à double échelle pour la modélisation demouvements gravitaires liés aux changements climatiques", se porte sur le développement d'une modélisation mécanique numérique pour l’écoulement de matériaux complexes. 
+La méthodologie numérique pour réaliser ce simulation est basé sur La modélisation en intégrer 2 échelle simultané, qui consiste 2 processus hiérarchiques de each other. 
+Pour cette homogénéisation, LA Méthode lagrangienne de Points Matériels (MPM) est choisisé à gestionner  La macroscopic, handle la mobilité du l'écoulement. 
+meanwhile la microscopic, assuré par Méthode des éléments discrètes (DEM) jou la role de Loi Constitutive Homogénéisée Numériquement (LCHN).
+Effectivement, La couplage entre 2 méthodes différents has been used prevelantly est efficacely, sans peut pas ignorer comme FEm x DEM \cite{nguyen2013modelisation}. Mais pour résourdre ce probleme du écoulement granulaire, les 2 adopté méthodes bright shinely et apporte des avantages significatifs.
+For instance, comme indiqué dans \autoref{fig:MPMxDEM}, la MPM prends en charge de la computation du gradient de déformation, envoyant au DEM à calculer la tensor du contrainte selon la formulation de LOVE,WEBER et la cycle continue. 
+Grace à l'acces du DEM, la résolution intergranulaire important du petit échelle est accesiblé et manipulé liberté afin de s'adapter au complexité du matériaux modelisé. 
+One peut changer la taille, shape, rigidité, ou bien quelle indice qui s'adapté au matériau d'étude le plus précis. 
+En meme temps, MPM reduit la complexité du prix chère du calcul en le considérant comme un object total mais sans facer à la subis de grand déformation qui distorte la maillage comme FEM.
+
+\vspace{2em}
+Au laboratoire 3SR, deux programmes de calcul en C++ pour la MPM et la DEM s'appellent respectivement ``MPMbox'' et ``3D\_sandstone'' et leur intégration est bien implémentée~\cite{richefeu2025mpmxdem}.
+La modélisation est aussi réalisée et prouvée précise, mais il reste des verrous à surmonter:
+\begin{itemize}
+    \item Équivalence des inerties aux deux échelles : Indeed, MPM qui a été developpé pour handle des problemes contact des objets \cite{nguyen2023material.}, porte bien l'effet dynamique. En revanche, DEM censure les réponses mécaniques dynamiques en attendant une stabilisation statique systématique \cite{nguyen2014fem}. Leur couplage fait emerge des Diverses nouvelles interrogations théoriques sur l'équivalence des inerties aux deux échelles together en meme temps, when it comes to computational calcul for a granular flow which is highly dynamic.
+    \item Conditions aux limites et initiales~: spécifiquement, dans la simulation DEM, la partie de condition aux limites périodiques n'est pas réalisée de manière pleinement satisfaisante, ce qui pose des pics anormaux de contrainte.
+\end{itemize}
+Le détail est bien illustré dans les sections suivante
 
 
-\chapter{Bibliographie}
+
+\chapter{Étude bibliographique}
 \section{MPM}
 \begin{itemize}
 \item Thèse: Application de la Méthode des Points Matériels aux phénomènes gravitaires - Fabio GRACIA DANIES
@@ -43,7 +70,17 @@
       \item Thèse: Application de la Méthode des Points Matériels aux phénomènes gravitaires - Fabio GRACIA DANIES
       \item \cite{richefeu2025mpmxdem}
 \end{itemize}
-\section{Corrélation}
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{CouplageMPMxDEM.png}
+\caption{Principe d’une approche à deux échelles hiérarchiques.\cite{projetderecherche}}
+\label{fig:MPMxDEM}
+\end{figure}
+La corrélation entre les deux échelles est décrite dans la \autoref{fig:MPMxDEM}. 
+% La partie à gauche représente un système MPM où on peut voir les
+% nœuds (bleus) de grille fixe, les points matériels (rouges). La partie à droite montre un volume
+% périodique DEM se déformant sous la demande d’un gradient de vitesse de la part d’un point
+% matériel, et répondant par une contrainte obtenue par homogénéisation numérique.
 
 \section{Compétences soutenues}
 \begin{itemize}
@@ -67,7 +104,7 @@
 \subsubsection{Discrétisation du maillage}
 \subsubsection{Comparaison entre calcul théorique et numérique}
                                 \begin{figure}
-                                   \small \input{Deplacement_Poutre.tex}
+                                   \centering\small\input{Deplacement_Poutre.tex}
                                     \caption{Déplacement du poutre en Y-axis}
                                 \end{figure}
 \subsection{Étude sur le cas dynamique}
@@ -77,7 +114,25 @@
 \subsection{Le processus et les paramètres}
 \subsection{Les caractéristiques mécaniques générales du sol}
 \subsubsection{La granulométrie et la fraction solide}
+% \begin{figure}[!h]
+%   \centering
+%   \subfloat[\texttt{Illustrator} and \texttt{LaTeXiT}]{\includegraphics{Taylor-bar-setup}\label{fig:figures11a}}
+%   \subfloat[\texttt{Inkscape} and PDF\_TEX]{\input{Taylor-bar-setup_pdf_tex.pdf_tex}\label{fig:figures11b}}
+%   \caption{Using \texttt{Illustrator} and \texttt{Inskcape} to produce vector images with \LaTeX\ symbols. The font in figure (a) is slightly different from the one in the text ($\nabla\cdot\boldsymbol{\sigma} = \boldsymbol{\mathit{0}}$), while it matches perfectly in figure (b).}
+%   \label{fig:figures11}
+% \end{figure}
 \subsubsection{La granulométrie et la fraction solide}
+La fraction solide caractère la dispersion des particules solide dans une volumne.
+\[
+\Phi = \dfrac{V_s}{V} = \dfrac{\sum\limits_{i = 1}^n \frac{4}{3}\pi R_i^3}{\det(h)}
+\]
+                                \begin{figure}
+                                   \centering \small \input{fractonSolide.tex}
+                                    \caption{La fraction solide}
+                                    \label{fig:fractionSolideMax}
+                                \end{figure}
+
+La \autoref{fig:fractionSolideMax} montre que leur valeur maximale $\Phi_{\max}$ pour une dispersion désordonnée de sphères en contact dense est approximée à 0.64~\cite{combe2023demlecture}.
 \subsubsection{Les caractéristiques des échantillons denses}
 \subsubsection{Les caractéristiques des échantillons lâches}
 \subsubsection{L'état critique}
@@ -90,11 +145,7 @@
 \subsection{Recherche sur l'impact dynamique}
 
 \subsubsection{Augmentation du nombre d'inertie (Montée la vitesse imposée)}
-\begin{figure}
-\centering
-\includegraphics[width=0.3\textwidth]{frog.jpg}
-\caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
-\end{figure}
+
 
 \section{Couplage\ldots}
 \subsection{How to add Tables}
@@ -127,6 +178,7 @@ You can make lists with automatic numbering \dots
 \chapter{Conclusion}
 
                                 \begin{figure}
+                                    \centering
                                   \small
                                   \input{RapportVides.tex}
                                     \caption{L'indice de vide}
@@ -165,15 +217,15 @@ You can make lists with automatic numbering \dots
 
 Expérimental : 
 \[
-I =  \frac{\dot{\varepsilon} \cdot \bar{a}}{\sqrt{\sigma_{33}/\rho_s}}; \quad \mu = \sin(\varphi)
+I =  \dfrac{\dot{\varepsilon} \cdot \bar{a}}{\sqrt{\sigma_{33}/\rho_s}}; \quad \mu = \sin(\varphi)
 \]
 
 Simulation : 
 \[
-I = \dot{\varepsilon} \times \sqrt {\frac{m}{\sigma_{33}\times \bar{a}}}  
-= \dot{\varepsilon} \times \sqrt {\frac{\frac{4}{3} \pi \frac{\bar{a}^3}{8} \times \rho_s}{\sigma_{33}\times \bar{a}}} 
-= \dot{\varepsilon} \times \sqrt{\frac{\pi}{6}} \sqrt {\frac{\bar{a}^2 \rho_s}{\sigma_{33}}} 
-= \boxed{\sqrt{\frac{\pi}{6}}} \times \frac{\dot{\varepsilon} \cdot \bar{a}}{\sqrt{\sigma_{33}/\rho_s}}
+I = \dot{\varepsilon} \times \sqrt {\dfrac{m}{\sigma_{33}\times \bar{a}}}  
+= \dot{\varepsilon} \times \sqrt {\dfrac{\dfrac{4}{3} \pi \dfrac{\bar{a}^3}{8} \times \rho_s}{\sigma_{33}\times \bar{a}}} 
+= \dot{\varepsilon} \times \sqrt{\dfrac{\pi}{6}} \sqrt {\dfrac{\bar{a}^2 \rho_s}{\sigma_{33}}} 
+= \boxed{\sqrt{\dfrac{\pi}{6}}} \times \dfrac{\dot{\varepsilon} \cdot \bar{a}}{\sqrt{\sigma_{33}/\rho_s}}
 \]
 \[
 \mu = \tan(\varphi)
@@ -185,7 +237,7 @@ I = \dot{\varepsilon} \times \sqrt {\frac{m}{\sigma_{33}\times \bar{a}}}
 
 La première méthode utilise les équations suivantes :
 \[
-\mu(I) = \mu_s + \frac{\mu_2 - \mu_s}{1 + \frac{I_0}{I}}
+\mu(I) = \mu_s + \dfrac{\mu_2 - \mu_s}{1 + \dfrac{I_0}{I}}
 \]
 \[
 \Phi(I) = \Phi^{\max} - bI
