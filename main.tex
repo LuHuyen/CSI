@@ -353,6 +353,45 @@ Quand la déformation est suffisamment grande (environ 8 \%), les courbes tenden
     \caption{Valeurs des paramètres utilisés dans la compression triaxiale}
     \end{table}
 
+                                    \begin{frame}{L'étude sur l'effet dynamique}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \scalebox{0.5}{\input{Test_Critique.tex}}
+            \vspace{0.5em}
+            \centering
+            {\small Contrainte Déviatorique et Déformation Volumique}
+        \end{column}
+            
+        \begin{column}{0.5\textwidth}
+            \centering
+            \scalebox{0.5}{\input{Cohesion_Critique.tex}}
+            \vspace{0.5em}
+            {\small Cercle du Mohr}
+        \end{column}
+        \end{columns}
+        \end{frame}
+
+
+                                \begin{frame}{L'étude sur l'effet dynamique}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \scalebox{0.5}{\input{Test.tex}}
+            \vspace{0.5em}
+            {\small Contrainte Déviatorique et Déformation Volumique}
+        \end{column}
+            
+        \begin{column}{0.5\textwidth}
+            \centering
+            \scalebox{0.5}{\input{Cohesion.tex}}
+            \vspace{0.5em}
+            {\small Cercle du Mohr}
+        \end{column}
+        \end{columns}
+
+    \end{frame}
+
 \section{Couplage\ldots}
 
 \chapter{Conclusion}
@@ -415,7 +454,8 @@ I = \dot{\varepsilon} \times \sqrt {\dfrac{m}{\sigma_{33}\times \bar{a}}}
 
 \subsection{Première méthode}
 
-La première méthode utilise les équations suivantes :
+La première méthode utilise les équations suivantes : (JOP, P., FORTERRE, Y. & POULIQUEN, O. 2005 Crucial role of sidewalls in granular surface flows:
+consequences for the rheology. J. Fluid Mech. 541, 167.)
 \[
 \mu(I) = \mu_s + \dfrac{\mu_2 - \mu_s}{1 + \dfrac{I_0}{I}}
 \]

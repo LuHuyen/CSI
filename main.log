@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.17)  17 JUN 2025 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.17)  17 JUN 2025 19:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1029,322 +1029,74 @@ l.321     \centering
 You've lost some text.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Chapitre 3.
 
-/home/3S-LAB/vquach/Documents/CSI/main.tex:361: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 ...                               \centering
-                                                  
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./indiceVide.tex
-Package epstopdf Info: Source file: <./indiceVide.eps>
-(epstopdf)                    date: 2025-06-17 18:58:31
-(epstopdf)                    size: 40939 bytes
-(epstopdf)             Output file: <./indiceVide-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-17 18:59:09
-(epstopdf)                    size: 15734 bytes
-(epstopdf)             Command: <repstopdf --outfile=./indiceVide-eps-converted-to.pdf ./indiceVide.eps>
-(epstopdf)             \includegraphics on input line 132.
-Package epstopdf Info: Output file is already uptodate.
-<./indiceVide-eps-converted-to.pdf, id=173, 361.35pt x 252.945pt>
-File: ./indiceVide-eps-converted-to.pdf Graphic file (type pdf)
-<use ./indiceVide-eps-converted-to.pdf>
-Package pdftex.def Info: ./indiceVide-eps-converted-to.pdf  used on input line 132.
-(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-)
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:368: LaTeX Error: Not in outer par mode.
+/home/3S-LAB/vquach/Documents/CSI/main.tex:357: LaTeX Error: Environment columns undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.368                                    \input
-                                               {NombreCoordination.tex}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./NombreCoordination.tex
-Package epstopdf Info: Source file: <./NombreCoordination.eps>
-(epstopdf)                    date: 2025-05-28 13:48:12
-(epstopdf)                    size: 43442 bytes
-(epstopdf)             Output file: <./NombreCoordination-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-13 16:16:40
-(epstopdf)                    size: 16190 bytes
-(epstopdf)             Command: <repstopdf --outfile=./NombreCoordination-eps-converted-to.pdf ./NombreCoordination.eps>
-(epstopdf)             \includegraphics on input line 138.
-Package epstopdf Info: Output file is already uptodate.
-<./NombreCoordination-eps-converted-to.pdf, id=174, 361.35pt x 252.945pt>
-File: ./NombreCoordination-eps-converted-to.pdf Graphic file (type pdf)
-<use ./NombreCoordination-eps-converted-to.pdf>
-Package pdftex.def Info: ./NombreCoordination-eps-converted-to.pdf  used on input line 138.
-(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-)
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:376: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.376                                     \input
-                                                {Test.tex}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./Test.tex
-Package epstopdf Info: Source file: <./Test.eps>
-(epstopdf)                    date: 2025-05-28 15:32:24
-(epstopdf)                    size: 336512 bytes
-(epstopdf)             Output file: <./Test-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-13 16:16:41
-(epstopdf)                    size: 162658 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Test-eps-converted-to.pdf ./Test.eps>
-(epstopdf)             \includegraphics on input line 150.
-Package epstopdf Info: Output file is already uptodate.
-<./Test-eps-converted-to.pdf, id=175, 361.35pt x 252.945pt>
-File: ./Test-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Test-eps-converted-to.pdf>
-Package pdftex.def Info: ./Test-eps-converted-to.pdf  used on input line 150.
-(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-)
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:383: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.383                                   \input
-                                              {Transitoire.tex}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./Transitoire.tex
-Package epstopdf Info: Source file: <Transitoire.eps>
-(epstopdf)                    date: 2025-05-28 15:32:25
-(epstopdf)                    size: 31478 bytes
-(epstopdf)             Output file: <Transitoire-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-13 16:16:41
-(epstopdf)                    size: 6859 bytes
-(epstopdf)             Command: <repstopdf --outfile=Transitoire-eps-converted-to.pdf Transitoire.eps>
-(epstopdf)             \includegraphics on input line 121.
-Package epstopdf Info: Output file is already uptodate.
-<Transitoire-eps-converted-to.pdf, id=176, 361.35pt x 252.945pt>
-File: Transitoire-eps-converted-to.pdf Graphic file (type pdf)
-<use Transitoire-eps-converted-to.pdf>
-Package pdftex.def Info: Transitoire-eps-converted-to.pdf  used on input line 121.
-(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-)
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:391: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.391                                     \input
-                                                {Résiduel.tex}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./Résiduel.tex
-Package epstopdf Info: Source file: <Résiduel.eps>
-(epstopdf)                    date: 2025-05-28 15:32:25
-(epstopdf)                    size: 32304 bytes
-(epstopdf)             Output file: <Résiduel-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-13 16:16:42
-(epstopdf)                    size: 7368 bytes
-(epstopdf)             Command: <repstopdf --outfile=Résiduel-eps-converted-to.pdf Résiduel.eps>
-(epstopdf)             \includegraphics on input line 120.
-Package epstopdf Info: Output file is already uptodate.
-<Résiduel-eps-converted-to.pdf, id=177, 361.35pt x 252.945pt>
-File: Résiduel-eps-converted-to.pdf Graphic file (type pdf)
-<use Résiduel-eps-converted-to.pdf>
-Package pdftex.def Info: Résiduel-eps-converted-to.pdf  used on input line 120.
-(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-)
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 414.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mu' on input line 414.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 414.
-
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:429: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.429     \centering
-                    
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./mu_I_fit.tex
-Package epstopdf Info: Source file: <./mu_I_fit.eps>
-(epstopdf)                    date: 2025-06-02 15:55:56
-(epstopdf)                    size: 20978 bytes
-(epstopdf)             Output file: <./mu_I_fit-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-13 15:46:57
-(epstopdf)                    size: 3993 bytes
-(epstopdf)             Command: <repstopdf --outfile=./mu_I_fit-eps-converted-to.pdf ./mu_I_fit.eps>
-(epstopdf)             \includegraphics on input line 127.
-Package epstopdf Info: Output file is already uptodate.
-<./mu_I_fit-eps-converted-to.pdf, id=178, 361.35pt x 252.945pt>
-File: ./mu_I_fit-eps-converted-to.pdf Graphic file (type pdf)
-<use ./mu_I_fit-eps-converted-to.pdf>
-Package pdftex.def Info: ./mu_I_fit-eps-converted-to.pdf  used on input line 127.
-(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-)
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:437: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437     \centering
-                    
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./Pack_I_fit.tex
-Package epstopdf Info: Source file: <./Pack_I_fit.eps>
-(epstopdf)                    date: 2025-06-02 15:55:56
-(epstopdf)                    size: 21213 bytes
-(epstopdf)             Output file: <./Pack_I_fit-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-13 15:46:58
-(epstopdf)                    size: 3975 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Pack_I_fit-eps-converted-to.pdf ./Pack_I_fit.eps>
-(epstopdf)             \includegraphics on input line 128.
-Package epstopdf Info: Output file is already uptodate.
-<./Pack_I_fit-eps-converted-to.pdf, id=179, 361.35pt x 252.945pt>
-File: ./Pack_I_fit-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Pack_I_fit-eps-converted-to.pdf>
-Package pdftex.def Info: ./Pack_I_fit-eps-converted-to.pdf  used on input line 128.
-(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-)
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:462: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.462     \centering
-                    
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./Q_mu.tex
-Package epstopdf Info: Source file: <./Q_mu.eps>
-(epstopdf)                    date: 2025-06-02 15:55:56
-(epstopdf)                    size: 21304 bytes
-(epstopdf)             Output file: <./Q_mu-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-13 15:46:58
-(epstopdf)                    size: 4037 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Q_mu-eps-converted-to.pdf ./Q_mu.eps>
-(epstopdf)             \includegraphics on input line 131.
-Package epstopdf Info: Output file is already uptodate.
-<./Q_mu-eps-converted-to.pdf, id=181, 361.35pt x 252.945pt>
-File: ./Q_mu-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Q_mu-eps-converted-to.pdf>
-Package pdftex.def Info: ./Q_mu-eps-converted-to.pdf  used on input line 131.
-(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./main.bbl
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-))
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:474: LaTeX Error: \begin{table} on input line 318 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.474 \end{document}
-                    
+l.357     \begin{columns}
+                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-(./main.aux)
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  6B2EBB8D9DBEA6626202E86636187E2E;2276.
-/home/3S-LAB/vquach/Documents/CSI/main.tex:474: You can't use `\end' in internal vertical mode.
-\enddocument ...cument/end}\deadcycles \z@ \@@end 
-                                                  
-l.474 \end{document}
-                    
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-/home/3S-LAB/vquach/Documents/CSI/main.tex:474: LaTeX Error: \begin{table} on input line 318 ended by \end{document}.
+/home/3S-LAB/vquach/Documents/CSI/main.tex:358: LaTeX Error: Environment column undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.474 \end{document}
-                    
+l.358         \begin{column}
+                            {0.5\textwidth}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/3S-LAB/vquach/Documents/CSI/main.tex:474: Missing } inserted.
-<inserted text> 
-                }
-l.474 \end{document}
-                    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+/home/3S-LAB/vquach/Documents/CSI/main.tex:358: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.358         \begin{column}{0.5\textwidth}
+                                           
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
-)
-! Emergency stop.
-<*> /home/3S-LAB/vquach/Documents/CSI/main.tex
-                                              
-*** (job aborted, no legal \end found)
+/home/3S-LAB/vquach/Documents/CSI/main.tex:358: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.358         \begin{column}{0.5\textwidth}
+                                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: File `Test_Critique.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+/home/3S-LAB/vquach/Documents/CSI/main.tex:360: Emergency stop.
+<read *> 
+         
+l.360 ...\scalebox{0.5}{\input{Test_Critique.tex}}
+                                                  ^^M
+*** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 37948 strings out of 478287
- 868725 string characters out of 5849289
+ 37574 strings out of 478287
+ 860299 string characters out of 5849289
  1242067 words of memory out of 5000000
- 55447 multiletter control sequences out of 15000+600000
- 490851 words of font info for 85 fonts, out of 8000000 for 9000
+ 55106 multiletter control sequences out of 15000+600000
+ 488992 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,15n,93p,751b,709s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+/home/3S-LAB/vquach/Documents/CSI/main.tex:360:  ==> Fatal error occurred, no output PDF file produced!
