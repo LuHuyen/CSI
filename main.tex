@@ -74,6 +74,8 @@ GRace à leur flexibilité, tous les effect de forces intergranulaire est capabl
     \end{itemize}
 \end{itemize} 
 Dans l'étude actuellement, la shape de grain est sphere 3D mais One peut changer la taille, shape, rigidité, ou bien quelle indice qui s'adapté au matériau d'étude le plus précis. 
+Neu khong xet den truong hop cac hat dang bi gioi han boi mot vat the rigid co dinh nao do nhu turbine quay hoac mot ong rigide, Une condition limite duoc su dung pho bien trong cac bai toan mo phong la periodic. 
+No co the hieu 1 cach truc quan nhu 1 canh cong teleport trong cac tro choi dien tu: Neu 1 hat di qua bien o dau nay thi no se duoc xuat hien lai o dau bien ben kia.
 C'est possible de diviser simplement l'algorithme de DEM en aussi 4 steps principale:
 \begin{enumerate}
 \item À l'instant $t$, avec la liste de position de graines, vérifions nous les contacts entre elles
@@ -199,6 +201,7 @@ Pas de temps & $d_t$  & $10^{-6} \div 10^{-10}$ & $-$\\
 \hline
 \end{tabular}
 \caption{Valeurs des paramètres utilisés dans la compression triaxiale}
+\label{tab:parametre}
 \end{table}
 
 \subsection{Les caractéristiques mécaniques générales du sol}
@@ -244,7 +247,6 @@ La \autoref{fig:fractionSolideMax} montre que leur valeur maximale $\Phi_{\max}$
     \label{eq:qformulation}
 \end{equation}
 
-paragraph{La force entre les grains}
 \begin{figure}[h!]
     \centering
     \subfloat[norme des forces]{\scalebox{0.33}{\small \input{Taux_ft_fn.tex}}\label{fig:palier_a}}
@@ -279,69 +281,82 @@ Cette état est la région utisant pour la simulation de écoulement.
     \caption{Cercle du Mohr d'un l'échantillon dens au pic: lé cercles du couleur bleu, rouge, vert represent $\sigma_3 = 100, 200, 300$ respectively}
     \label{fig:CercleDuMohr}
 \end{figure}
-
-
-
+DIem dac biet cua DEM la chung ta chi intefere vao cac thong so o microscopic, va cac ung xu o grande echelle se xuat hien 1 cach naturally.
+One could verify its rightness by comparing to the well-known large scale behavior in mechanic de sol.  
 Cercle du Mohr est une méthode bien connu pour identifier suc khang cat lon nhat cua dat. Tu do thi cua no, one peut identifier : La cohésion $c$ et goc ma sat trong $\varphi$
 \begin{equation}
     \tau = \sigma_n * \tan(\varphi) + C
     \label{eq:tangentMohr}
 \end{equation}
 Diem quadrature ben trai cua moi duong tron dans la figure \ref{fig:CercleDuMohr} the hien ung suat $\sigma_3$,con diem ben phai $\sigma_2$ the hien gia tri ung suat tai vung dang xet.
-Khi thuc hien thi nghiem compression triaxiale voi cung mot mau ma thay doi $\sigma_3$, multiples cercles peut etre dessine et finalement la droite tangente aux cercles co phuong trinh nhu \ref{eq:tangentMohr}.
+Khi thuc hien thi nghiem compression triaxiale voi cung mot mau ma thay doi $\sigma_3$, multiples cercles peut etre dessine et finalement la droite tangente aux cercles co phuong trinh nhu \ref{eq:tangentMohr} la duong gioi han Mohr-Coulomb.
 O day ta quan tam den 2 vung quan trong nhat la pic va l'état crique.
 Doi voi mot mau chat, Ta co the hieu pic (vi tri ung suat cao nhat) the hien gia tri ung suat lon nhat truoc khi dat bi pha hoai boi luc cat. 
 La pente de la droite tangente au cercles, hay $\tan(\varphi) = \mu$, se cho thay su ma sat o giai doan dang xet. 
-Normalement on considère que le mu résiduel est un mu stationnaire. 
-Va vi mau cua chung ta la sable sec, diem giao giua 
+la figure \ref{fig:CercleDuMohr} cho ta gia tri $\mu_{résiduel}$ o vi tri Pic, tuc la khi kha nang chiu cat nho cac contact frottant cua cac hat la lon nhat.
+con khi on parle du  $\mu_{résiduel}$, on fait bien référence à la pente de la droite tangente au cercle de Mohr à l’état critique.
+Normalement on considère que le $\mu_{résiduel}$ est un $\mu$ stationnaire. 
+Va vi mau cua chung ta la sable sec, diem giao giua giua duong pente des cercles voi truc tung theo ly thuyet la phai bang 0, tuong trung cho $c = 0$ hay noi cach khac la khong co luc dinh.
 
 \subsection{Recherche sur l'impact dynamique}
+Dans ce section, on fait un étude sur la nombre d'inertie, which is a verrou que on a mentionné dans le objet de thèse.
+Augmentation du nombre d'inertie du test triaxial , cest a dire Montée la vitesse imposée. Normalement, $$
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+$ I < 10^{-4} $ & $ 10^{-4} < I < 10^{-1} $ & $ I > 10^{-1} $ \\ 
+\hline
+Solides & Fluides & Gaz \\  
+\hline
+\end{tabular}
+\caption{Nombre d'inertie}
+\label{tab:nombreInertie}
+\end{table}
 
-\subsubsection{Augmentation du nombre d'inertie (Montée la vitesse imposée)}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering \small
+        % \scalebox{0.5}{\input{Test_Critique.tex}}
+        \caption{Contrainte-Déformation}
+        \label{fig:contrainte}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering \small
+        % \scalebox{0.5}{\input{Cohesion_Critique.tex}}
+        \caption{Déformation Volumique}
+        \label{fig:defvo}
+    \end{subfigure}
+    \caption{Comparaison des réponses}
+    \label{fig:comparaison}
+\end{figure}
 
 
-                                    \begin{frame}{L'étude sur l'effet dynamique}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \centering
-            \scalebox{0.5}{\input{Test_Critique.tex}}
-            \vspace{0.5em}
-            \centering
-            {\small Contrainte Déviatorique et Déformation Volumique}
-        \end{column}
+
+    % \begin{frame}{L'étude sur l'effet dynamique}
+    % \begin{columns}
+    %     \begin{column}{0.5\textwidth}
+    %         \centering
+    %         \scalebox{0.5}{\input{Test.tex}}
+    %         \vspace{0.5em}
+    %         {\small Contrainte Déviatorique et Déformation Volumique}
+    %     \end{column}
             
-        \begin{column}{0.5\textwidth}
-            \centering
-            \scalebox{0.5}{\input{Cohesion_Critique.tex}}
-            \vspace{0.5em}
-            {\small Cercle du Mohr}
-        \end{column}
-        \end{columns}
-        \end{frame}
+    %     \begin{column}{0.5\textwidth}
+    %         \centering
+    %         \scalebox{0.5}{\input{Cohesion.tex}}
+    %         \vspace{0.5em}
+    %         {\small Cercle du Mohr}
+    %     \end{column}
+    %     \end{columns}
+
+    % \end{frame}
 
 
-                                \begin{frame}{L'étude sur l'effet dynamique}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \centering
-            \scalebox{0.5}{\input{Test.tex}}
-            \vspace{0.5em}
-            {\small Contrainte Déviatorique et Déformation Volumique}
-        \end{column}
-            
-        \begin{column}{0.5\textwidth}
-            \centering
-            \scalebox{0.5}{\input{Cohesion.tex}}
-            \vspace{0.5em}
-            {\small Cercle du Mohr}
-        \end{column}
-        \end{columns}
 
-    \end{frame}
-
-\section{Couplage\ldots}
-
-\chapter{Conclusion}
 
                                 \begin{figure}
                                     \centering
@@ -453,6 +468,7 @@ Les coefficients $\xi,\ C,\ \Phi_0$ sont déterminés empiriquement ($\xi \appro
     \caption{$\mu(Q)$ avec $Q = f(\Phi_0, I)$}
 \end{figure}
 
+\chapter{Conclusion}
 
 \bibliographystyle{plain}
 \bibliography{Bibliographie}
