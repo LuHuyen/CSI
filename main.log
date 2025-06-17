@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.17)  16 JUN 2025 17:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.17)  17 JUN 2025 19:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -23,6 +23,8 @@ File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/01/26 3.70 The Babel package
 \babel@savecnt=\count194
@@ -509,6 +511,28 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks40
 \inpenc@posthook=\toks41
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen291
+\captionmargin@=\dimen292
+\captionwidth=\dimen293
+\caption@tempdima=\dimen294
+\caption@indent=\dimen295
+\caption@parindent=\dimen296
+\caption@hangindent=\dimen297
+Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
+)
+\c@caption@flags=\count322
+\c@continuedfloat=\count323
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count324
+\c@subtable=\count325
 ) (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -522,38 +546,112 @@ LaTeX Info: Redefining \cpagerefrange on input line 2370.
 LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen298
+\enit@toks=\toks42
+\enit@inbox=\box64
+\enit@count@id=\count326
+\enitdp@description=\count327
+) (/usr/share/texlive/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2022/01/31 PDF & SVG animations from files and inline graphics
+ (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
+)
+\XKV@depth=\count328
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count329
+\calc@Bcount=\count330
+\calc@Adimen=\dimen299
+\calc@Bdimen=\dimen300
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count331
+\calc@Cskip=\skip56
+) (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count332
+Package zref Info: New property: abspage on input line 66.
+) (/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count322
-\l__pdf_internal_box=\box64
+\l__color_backend_stack_int=\count333
+\l__pdf_internal_box=\box65
+))
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+Package: pdfbase 2021/09/12 v0.53 driver independent access to low-level PDF features
+\g_pbs_page_int=\count334
+\g_pbs_oc_int=\count335
+) (/usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2021/06/11 v0.20 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count336
+)
+\@anim@box=\box66
+\@anim@measbox=\box67
+\@anim@tmpdima=\dimen301
+\@anim@tmpdimb=\dimen302
+\@anim@num=\count337
+\@anim@curframe=\count338
+\@anim@curframe@zb=\count339
+\@anim@resizeflags=\count340
+\@anim@skipfram=\count341
+\@anim@mulframecnt=\count342
+\@anim@@tmlnfile=\read4
+\@anim@tmpcnt=\count343
+\c@@anim@ltxcnt=\count344
+\@anim@curlayer=\count345
+\@anim@lineno=\count346
+\@anim@curfield=\count347
+\@anim@@resizeflags=\count348
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Info: Redefining \degres on input line 23.
-LaTeX Info: Redefining \up on input line 23.
-
-
-Package french.ldf Warning: OT1 encoding should not be used for French.
-(french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(french.ldf)                of your document; reported on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Info: Redefining \degres on input line 27.
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 27.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 27.
+LaTeX Info: Redefining \up on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -591,24 +689,24 @@ Package french.ldf Warning: OT1 encoding should not be used for French.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen291
-\scratchbox=\box65
-\nofMPsegments=\count324
-\nofMParguments=\count325
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen292
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count349
+\scratchdimen=\dimen303
+\scratchbox=\box68
+\nofMPsegments=\count350
+\nofMParguments=\count351
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count352
+\MPscratchDim=\dimen304
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 23.
+Package hyperref Info: Link coloring ON on input line 27.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -616,69 +714,95 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count329
+\c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
- (./main.out) (./main.out)
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 \chapter
-             {Introduction de la thèse} [1
+l.33 \chapter
+             {Étude bibliographique} [1
 
 ]
 Chapitre 1.
 
-Overfull \hbox (29.92212pt too wide) in paragraph at lines 31--43
-\OT1/cmr/m/n/12 en-voyant au DEM ^^Ra cal-cu-ler la ten-sor du contrainte se-lon la for-mu-la-tion de LOVE,WEBER
- []
-
-
-LaTeX Warning: Citation `nguyen2023material.' on page 2 undefined on input line 48.
+LaTeX Warning: Citation `danies2018application' on page 2 undefined on input line 48.
 
 [2
 
-] [3]
-Chapitre 2.
-
-Overfull \hbox (3.44975pt too wide) in paragraph at lines 65--66
-[]\OT1/cmr/m/n/12 Th^^Rese : Mod^^Selisation multi-^^Sechelle des mat^^Seriaux gra-nu-laires frottant-coh^^Sesifs :
+]
+Overfull \hbox (1.77588pt too wide) in paragraph at lines 65--66
+[]\T1/cmr/m/n/12 la force nor-male ($\OML/cmm/m/it/12 f[]$\T1/cmr/m/n/12 ) : Com-po-sante �las-tique ($\OML/cmm/m/it/12 f[]$\T1/cmr/m/n/12 ), Com-po-sante d'amor-
  []
 
-<CouplageMPMxDEM.png, id=149, 286.452pt x 129.1005pt>
+[3]
+<CouplageMPMxDEM.png, id=48, 286.452pt x 129.1005pt>
 File: CouplageMPMxDEM.png Graphic file (type png)
 <use CouplageMPMxDEM.png>
-Package pdftex.def Info: CouplageMPMxDEM.png  used on input line 75.
-(pdftex.def)             Requested size: 128.0387pt x 57.7066pt.
-[4
+Package pdftex.def Info: CouplageMPMxDEM.png  used on input line 89.
+(pdftex.def)             Requested size: 213.39568pt x 96.17899pt.
 
- <./CouplageMPMxDEM.png>]
-Chapitre 3.
+
+LaTeX Warning: Citation `projetderecherche' on page 4 undefined on input line 90.
+
+
+LaTeX Warning: Citation `projetderecherche' on page 4 undefined on input line 90.
+
+
+LaTeX Warning: Citation `nguyen2013modelisation' on page 4 undefined on input line 93.
+
+
+LaTeX Warning: Reference `fig:MPMxDEM' on page 4 undefined on input line 95.
+
+
+LaTeX Warning: Citation `richefeu2025mpmxdem' on page 4 undefined on input line 100.
+
+
+LaTeX Warning: Citation `nguyen2023material.' on page 4 undefined on input line 103.
+
+
+LaTeX Warning: Citation `nguyen2014fem' on page 4 undefined on input line 103.
+
+[4 <./CouplageMPMxDEM.png>]
+Chapitre 2.
+<Model_Poutre.png, id=63, 2489.3pt x 566.115pt>
+File: Model_Poutre.png Graphic file (type png)
+<use Model_Poutre.png>
+Package pdftex.def Info: Model_Poutre.png  used on input line 127.
+(pdftex.def)             Requested size: 418.00964pt x 95.06422pt.
+
+LaTeX Warning: Citation `projetderecherche' on page 5 undefined on input line 128.
+
+
+LaTeX Warning: Citation `projetderecherche' on page 5 undefined on input line 128.
+
 (./Deplacement_Poutre.tex
-\gptboxheight=\skip53
-\gptboxwidth=\skip54
-\gptboxtext=\box66
+\gptboxheight=\skip57
+\gptboxwidth=\skip58
+\gptboxtext=\box69
 Package epstopdf Info: Source file: <./Deplacement_Poutre.eps>
 (epstopdf)                    date: 2025-06-13 17:44:05
 (epstopdf)                    size: 29640 bytes
@@ -688,51 +812,265 @@ Package epstopdf Info: Source file: <./Deplacement_Poutre.eps>
 (epstopdf)             Command: <repstopdf --outfile=./Deplacement_Poutre-eps-converted-to.pdf ./Deplacement_Poutre.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
-<./Deplacement_Poutre-eps-converted-to.pdf, id=161, 361.35pt x 252.945pt>
+<./Deplacement_Poutre-eps-converted-to.pdf, id=64, 361.35pt x 252.945pt>
 File: ./Deplacement_Poutre-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Deplacement_Poutre-eps-converted-to.pdf>
 Package pdftex.def Info: ./Deplacement_Poutre-eps-converted-to.pdf  used on input line 124.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./fractonSolide.tex
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `eq:fleche' on page 5 undefined on input line 148.
+
+
+LaTeX Warning: Reference `fig:deplacementPoutre' on page 5 undefined on input line 148.
+
+<Triaxial_1.png, id=65, 1213.53375pt x 1081.03876pt>
+File: Triaxial_1.png Graphic file (type png)
+<use Triaxial_1.png>
+Package pdftex.def Info: Triaxial_1.png  used on input line 160.
+(pdftex.def)             Requested size: 1213.5308pt x 1081.03612pt.
+ <./Triaxial_1.png> <a0,fr0>
+<Triaxial_2.png, id=69, 1213.53375pt x 1081.03876pt>
+File: Triaxial_2.png Graphic file (type png)
+<use Triaxial_2.png>
+Package pdftex.def Info: Triaxial_2.png  used on input line 160.
+(pdftex.def)             Requested size: 1213.5308pt x 1081.03612pt.
+ <./Triaxial_2.png> <a0,fr1>
+<Triaxial_3.png, id=73, 1213.53375pt x 1081.03876pt>
+File: Triaxial_3.png Graphic file (type png)
+<use Triaxial_3.png>
+Package pdftex.def Info: Triaxial_3.png  used on input line 160.
+(pdftex.def)             Requested size: 1213.5308pt x 1081.03612pt.
+ <./Triaxial_3.png> <a0,fr2>
+<Triaxial_4.png, id=77, 1213.53375pt x 1081.03876pt>
+File: Triaxial_4.png Graphic file (type png)
+<use Triaxial_4.png>
+Package pdftex.def Info: Triaxial_4.png  used on input line 160.
+(pdftex.def)             Requested size: 1213.5308pt x 1081.03612pt.
+ <./Triaxial_4.png> <a0,fr3>
+<Triaxial_5.png, id=81, 1213.53375pt x 1081.03876pt>
+File: Triaxial_5.png Graphic file (type png)
+<use Triaxial_5.png>
+Package pdftex.def Info: Triaxial_5.png  used on input line 160.
+(pdftex.def)             Requested size: 1213.5308pt x 1081.03612pt.
+ <./Triaxial_5.png> <a0,fr4>
+<Triaxial_6.png, id=85, 1213.53375pt x 1081.03876pt>
+File: Triaxial_6.png Graphic file (type png)
+<use Triaxial_6.png>
+Package pdftex.def Info: Triaxial_6.png  used on input line 160.
+(pdftex.def)             Requested size: 1213.5308pt x 1081.03612pt.
+ <./Triaxial_6.png> <a0,fr5>
+<Triaxial_7.png, id=89, 1213.53375pt x 1081.03876pt>
+File: Triaxial_7.png Graphic file (type png)
+<use Triaxial_7.png>
+Package pdftex.def Info: Triaxial_7.png  used on input line 160.
+(pdftex.def)             Requested size: 1213.5308pt x 1081.03612pt.
+ <./Triaxial_7.png> <a0,fr6>
+<Triaxial_8.png, id=93, 1213.53375pt x 1081.03876pt>
+File: Triaxial_8.png Graphic file (type png)
+<use Triaxial_8.png>
+Package pdftex.def Info: Triaxial_8.png  used on input line 160.
+(pdftex.def)             Requested size: 1213.5308pt x 1081.03612pt.
+ <./Triaxial_8.png> <a0,fr7> [5
+
+ <./Model_Poutre.png>]
+
+LaTeX Warning: Reference `fig:boiteDeformation' on page 6 undefined on input line 168.
+
+[6 <./Deplacement_Poutre-eps-converted-to.pdf>] (./fractonSolide.tex
 Package epstopdf Info: Source file: <./fractonSolide.eps>
-(epstopdf)                    date: 2025-06-16 10:52:42
+(epstopdf)                    date: 2025-06-16 17:24:04
 (epstopdf)                    size: 22016 bytes
 (epstopdf)             Output file: <./fractonSolide-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-16 11:58:04
+(epstopdf)                    date: 2025-06-16 17:24:04
 (epstopdf)                    size: 3886 bytes
 (epstopdf)             Command: <repstopdf --outfile=./fractonSolide-eps-converted-to.pdf ./fractonSolide.eps>
 (epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
-<./fractonSolide-eps-converted-to.pdf, id=162, 361.35pt x 252.945pt>
+<./fractonSolide-eps-converted-to.pdf, id=137, 361.35pt x 252.945pt>
 File: ./fractonSolide-eps-converted-to.pdf Graphic file (type pdf)
 <use ./fractonSolide-eps-converted-to.pdf>
 Package pdftex.def Info: ./fractonSolide-eps-converted-to.pdf  used on input line 132.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
 )
-Overfull \hbox (14.18642pt too wide) in paragraph at lines 135--136
-[]\OT1/cmr/m/n/12 La [][]fi-gure 3.2[][][] montre que leur va-leur maxi-male $^^H[]$ pour une dis-per-sion d^^Sesordonn^^See
- []
 
-[5
+LaTeX Warning: Reference `fig:fractionSolideMax' on page 7 undefined on input line 252.
 
-] [6 <./Deplacement_Poutre-eps-converted-to.pdf> <./fractonSolide-eps-converted-to.pdf>] [7]
-Chapitre 4.
-(./RapportVides.tex
-Package epstopdf Info: Source file: <./RapportVides.eps>
-(epstopdf)                    date: 2025-05-28 13:48:12
-(epstopdf)                    size: 40944 bytes
-(epstopdf)             Output file: <./RapportVides-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-13 16:16:40
-(epstopdf)                    size: 15738 bytes
-(epstopdf)             Command: <repstopdf --outfile=./RapportVides-eps-converted-to.pdf ./RapportVides.eps>
+
+LaTeX Warning: Citation `combe2023demlecture' on page 7 undefined on input line 252.
+
+[7] (./Contrainte-Deformation.tex
+Package epstopdf Info: Source file: <./Contrainte-Deformation.eps>
+(epstopdf)                    date: 2025-04-03 07:38:30
+(epstopdf)                    size: 336246 bytes
+(epstopdf)             Output file: <./Contrainte-Deformation-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-17 18:38:58
+(epstopdf)                    size: 170414 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Contrainte-Deformation-eps-converted-to.pdf ./Contrainte-Deformation.eps>
 (epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
-<./RapportVides-eps-converted-to.pdf, id=210, 361.35pt x 252.945pt>
+<./Contrainte-Deformation-eps-converted-to.pdf, id=152, 361.35pt x 252.945pt>
+File: ./Contrainte-Deformation-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Contrainte-Deformation-eps-converted-to.pdf>
+Package pdftex.def Info: ./Contrainte-Deformation-eps-converted-to.pdf  used on input line 132.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+) (./Deformation_Volumique.tex
+Package epstopdf Info: Source file: <./Deformation_Volumique.eps>
+(epstopdf)                    date: 2025-04-03 07:38:30
+(epstopdf)                    size: 295144 bytes
+(epstopdf)             Output file: <./Deformation_Volumique-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-17 18:38:59
+(epstopdf)                    size: 97604 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Deformation_Volumique-eps-converted-to.pdf ./Deformation_Volumique.eps>
+(epstopdf)             \includegraphics on input line 138.
+Package epstopdf Info: Output file is already uptodate.
+<./Deformation_Volumique-eps-converted-to.pdf, id=153, 361.35pt x 252.945pt>
+File: ./Deformation_Volumique-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Deformation_Volumique-eps-converted-to.pdf>
+Package pdftex.def Info: ./Deformation_Volumique-eps-converted-to.pdf  used on input line 138.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+) [8 <./fractonSolide-eps-converted-to.pdf> <./Contrainte-Deformation-eps-converted-to.pdf> <./Deformation_Volumique-eps-converted-to.pdf>] (./Taux_ft_fn.tex
+Package epstopdf Info: Source file: <./Taux_ft_fn.eps>
+(epstopdf)                    date: 2025-04-03 07:38:32
+(epstopdf)                    size: 52887 bytes
+(epstopdf)             Output file: <./Taux_ft_fn-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-17 18:54:37
+(epstopdf)                    size: 22753 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Taux_ft_fn-eps-converted-to.pdf ./Taux_ft_fn.eps>
+(epstopdf)             \includegraphics on input line 130.
+Package epstopdf Info: Output file is already uptodate.
+<./Taux_ft_fn-eps-converted-to.pdf, id=168, 361.35pt x 252.945pt>
+File: ./Taux_ft_fn-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Taux_ft_fn-eps-converted-to.pdf>
+Package pdftex.def Info: ./Taux_ft_fn-eps-converted-to.pdf  used on input line 130.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+) (./RapportVides.tex
+Package epstopdf Info: Source file: <./RapportVides.eps>
+(epstopdf)                    date: 2025-04-03 07:38:32
+(epstopdf)                    size: 49323 bytes
+(epstopdf)             Output file: <./RapportVides-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-17 19:01:52
+(epstopdf)                    size: 20993 bytes
+(epstopdf)             Command: <repstopdf --outfile=./RapportVides-eps-converted-to.pdf ./RapportVides.eps>
+(epstopdf)             \includegraphics on input line 130.
+Package epstopdf Info: Output file is already uptodate.
+<./RapportVides-eps-converted-to.pdf, id=169, 361.35pt x 252.945pt>
 File: ./RapportVides-eps-converted-to.pdf Graphic file (type pdf)
 <use ./RapportVides-eps-converted-to.pdf>
-Package pdftex.def Info: ./RapportVides-eps-converted-to.pdf  used on input line 132.
+Package pdftex.def Info: ./RapportVides-eps-converted-to.pdf  used on input line 130.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./NombreCoordination.tex
+) (./NombreContacts.tex
+Package epstopdf Info: Source file: <./NombreContacts.eps>
+(epstopdf)                    date: 2025-04-03 07:38:32
+(epstopdf)                    size: 52908 bytes
+(epstopdf)             Output file: <./NombreContacts-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-17 19:02:52
+(epstopdf)                    size: 21515 bytes
+(epstopdf)             Command: <repstopdf --outfile=./NombreContacts-eps-converted-to.pdf ./NombreContacts.eps>
+(epstopdf)             \includegraphics on input line 128.
+Package epstopdf Info: Output file is already uptodate.
+<./NombreContacts-eps-converted-to.pdf, id=170, 361.35pt x 252.945pt>
+File: ./NombreContacts-eps-converted-to.pdf Graphic file (type pdf)
+<use ./NombreContacts-eps-converted-to.pdf>
+Package pdftex.def Info: ./NombreContacts-eps-converted-to.pdf  used on input line 128.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+) (./CercleMohr.tex
+Package epstopdf Info: Source file: <CercleMohr.eps>
+(epstopdf)                    date: 2025-04-03 07:38:32
+(epstopdf)                    size: 24735 bytes
+(epstopdf)             Output file: <CercleMohr-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-17 19:09:36
+(epstopdf)                    size: 4693 bytes
+(epstopdf)             Command: <repstopdf --outfile=CercleMohr-eps-converted-to.pdf CercleMohr.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+<CercleMohr-eps-converted-to.pdf, id=171, 361.35pt x 252.945pt>
+File: CercleMohr-eps-converted-to.pdf Graphic file (type pdf)
+<use CercleMohr-eps-converted-to.pdf>
+Package pdftex.def Info: CercleMohr-eps-converted-to.pdf  used on input line 111.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+)
+Overfull \hbox (11.94838pt too wide) in paragraph at lines 299--300
+ [][] 
+ []
+
+(./LACHE_CercleMohr.tex
+Package epstopdf Info: Source file: <LACHE_CercleMohr.eps>
+(epstopdf)                    date: 2025-04-03 07:38:32
+(epstopdf)                    size: 24723 bytes
+(epstopdf)             Output file: <LACHE_CercleMohr-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-17 19:09:36
+(epstopdf)                    size: 4983 bytes
+(epstopdf)             Command: <repstopdf --outfile=LACHE_CercleMohr-eps-converted-to.pdf LACHE_CercleMohr.eps>
+(epstopdf)             \includegraphics on input line 115.
+Package epstopdf Info: Output file is already uptodate.
+<LACHE_CercleMohr-eps-converted-to.pdf, id=172, 361.35pt x 252.945pt>
+File: LACHE_CercleMohr-eps-converted-to.pdf Graphic file (type pdf)
+<use LACHE_CercleMohr-eps-converted-to.pdf>
+Package pdftex.def Info: LACHE_CercleMohr-eps-converted-to.pdf  used on input line 115.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+)
+Overfull \hbox (48.0791pt too wide) in paragraph at lines 306--307
+ [][] 
+ []
+
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:321: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.321     \centering
+                    
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Chapitre 3.
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:361: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...                               \centering
+                                                  
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./indiceVide.tex
+Package epstopdf Info: Source file: <./indiceVide.eps>
+(epstopdf)                    date: 2025-06-17 18:58:31
+(epstopdf)                    size: 40939 bytes
+(epstopdf)             Output file: <./indiceVide-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-17 18:59:09
+(epstopdf)                    size: 15734 bytes
+(epstopdf)             Command: <repstopdf --outfile=./indiceVide-eps-converted-to.pdf ./indiceVide.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+<./indiceVide-eps-converted-to.pdf, id=173, 361.35pt x 252.945pt>
+File: ./indiceVide-eps-converted-to.pdf Graphic file (type pdf)
+<use ./indiceVide-eps-converted-to.pdf>
+Package pdftex.def Info: ./indiceVide-eps-converted-to.pdf  used on input line 132.
+(pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
+)
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:368: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.368                                    \input
+                                               {NombreCoordination.tex}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./NombreCoordination.tex
 Package epstopdf Info: Source file: <./NombreCoordination.eps>
 (epstopdf)                    date: 2025-05-28 13:48:12
 (epstopdf)                    size: 43442 bytes
@@ -742,12 +1080,25 @@ Package epstopdf Info: Source file: <./NombreCoordination.eps>
 (epstopdf)             Command: <repstopdf --outfile=./NombreCoordination-eps-converted-to.pdf ./NombreCoordination.eps>
 (epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
-<./NombreCoordination-eps-converted-to.pdf, id=211, 361.35pt x 252.945pt>
+<./NombreCoordination-eps-converted-to.pdf, id=174, 361.35pt x 252.945pt>
 File: ./NombreCoordination-eps-converted-to.pdf Graphic file (type pdf)
 <use ./NombreCoordination-eps-converted-to.pdf>
 Package pdftex.def Info: ./NombreCoordination-eps-converted-to.pdf  used on input line 138.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./Test.tex
+)
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:376: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.376                                     \input
+                                                {Test.tex}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./Test.tex
 Package epstopdf Info: Source file: <./Test.eps>
 (epstopdf)                    date: 2025-05-28 15:32:24
 (epstopdf)                    size: 336512 bytes
@@ -757,12 +1108,25 @@ Package epstopdf Info: Source file: <./Test.eps>
 (epstopdf)             Command: <repstopdf --outfile=./Test-eps-converted-to.pdf ./Test.eps>
 (epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
-<./Test-eps-converted-to.pdf, id=212, 361.35pt x 252.945pt>
+<./Test-eps-converted-to.pdf, id=175, 361.35pt x 252.945pt>
 File: ./Test-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Test-eps-converted-to.pdf>
 Package pdftex.def Info: ./Test-eps-converted-to.pdf  used on input line 150.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./Transitoire.tex
+)
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:383: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.383                                   \input
+                                              {Transitoire.tex}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./Transitoire.tex
 Package epstopdf Info: Source file: <Transitoire.eps>
 (epstopdf)                    date: 2025-05-28 15:32:25
 (epstopdf)                    size: 31478 bytes
@@ -772,12 +1136,25 @@ Package epstopdf Info: Source file: <Transitoire.eps>
 (epstopdf)             Command: <repstopdf --outfile=Transitoire-eps-converted-to.pdf Transitoire.eps>
 (epstopdf)             \includegraphics on input line 121.
 Package epstopdf Info: Output file is already uptodate.
-<Transitoire-eps-converted-to.pdf, id=213, 361.35pt x 252.945pt>
+<Transitoire-eps-converted-to.pdf, id=176, 361.35pt x 252.945pt>
 File: Transitoire-eps-converted-to.pdf Graphic file (type pdf)
 <use Transitoire-eps-converted-to.pdf>
 Package pdftex.def Info: Transitoire-eps-converted-to.pdf  used on input line 121.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./Résiduel.tex
+)
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:391: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.391                                     \input
+                                                {Résiduel.tex}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./Résiduel.tex
 Package epstopdf Info: Source file: <Résiduel.eps>
 (epstopdf)                    date: 2025-05-28 15:32:25
 (epstopdf)                    size: 32304 bytes
@@ -787,7 +1164,7 @@ Package epstopdf Info: Source file: <Résiduel.eps>
 (epstopdf)             Command: <repstopdf --outfile=Résiduel-eps-converted-to.pdf Résiduel.eps>
 (epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
-<Résiduel-eps-converted-to.pdf, id=214, 361.35pt x 252.945pt>
+<Résiduel-eps-converted-to.pdf, id=177, 361.35pt x 252.945pt>
 File: Résiduel-eps-converted-to.pdf Graphic file (type pdf)
 <use Résiduel-eps-converted-to.pdf>
 Package pdftex.def Info: Résiduel-eps-converted-to.pdf  used on input line 120.
@@ -795,15 +1172,27 @@ Package pdftex.def Info: Résiduel-eps-converted-to.pdf  used on input line 120.
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 234.
+(hyperref)                removing `math shift' on input line 414.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mu' on input line 234.
+(hyperref)                removing `\mu' on input line 414.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 234.
+(hyperref)                removing `math shift' on input line 414.
+
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:429: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429     \centering
+                    
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 (./mu_I_fit.tex
 Package epstopdf Info: Source file: <./mu_I_fit.eps>
@@ -815,12 +1204,25 @@ Package epstopdf Info: Source file: <./mu_I_fit.eps>
 (epstopdf)             Command: <repstopdf --outfile=./mu_I_fit-eps-converted-to.pdf ./mu_I_fit.eps>
 (epstopdf)             \includegraphics on input line 127.
 Package epstopdf Info: Output file is already uptodate.
-<./mu_I_fit-eps-converted-to.pdf, id=215, 361.35pt x 252.945pt>
+<./mu_I_fit-eps-converted-to.pdf, id=178, 361.35pt x 252.945pt>
 File: ./mu_I_fit-eps-converted-to.pdf Graphic file (type pdf)
 <use ./mu_I_fit-eps-converted-to.pdf>
 Package pdftex.def Info: ./mu_I_fit-eps-converted-to.pdf  used on input line 127.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./Pack_I_fit.tex
+)
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:437: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.437     \centering
+                    
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./Pack_I_fit.tex
 Package epstopdf Info: Source file: <./Pack_I_fit.eps>
 (epstopdf)                    date: 2025-06-02 15:55:56
 (epstopdf)                    size: 21213 bytes
@@ -830,14 +1232,25 @@ Package epstopdf Info: Source file: <./Pack_I_fit.eps>
 (epstopdf)             Command: <repstopdf --outfile=./Pack_I_fit-eps-converted-to.pdf ./Pack_I_fit.eps>
 (epstopdf)             \includegraphics on input line 128.
 Package epstopdf Info: Output file is already uptodate.
-<./Pack_I_fit-eps-converted-to.pdf, id=216, 361.35pt x 252.945pt>
+<./Pack_I_fit-eps-converted-to.pdf, id=179, 361.35pt x 252.945pt>
 File: ./Pack_I_fit-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Pack_I_fit-eps-converted-to.pdf>
 Package pdftex.def Info: ./Pack_I_fit-eps-converted-to.pdf  used on input line 128.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) [8
+)
 
-] [9 <./RapportVides-eps-converted-to.pdf> <./NombreCoordination-eps-converted-to.pdf>] [10 <./Test-eps-converted-to.pdf> <./Transitoire-eps-converted-to.pdf>] [11 <./Résiduel-eps-converted-to.pdf> <./mu_I_fit-eps-converted-to.pdf>] (./Q_mu.tex
+/home/3S-LAB/vquach/Documents/CSI/main.tex:462: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.462     \centering
+                    
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./Q_mu.tex
 Package epstopdf Info: Source file: <./Q_mu.eps>
 (epstopdf)                    date: 2025-06-02 15:55:56
 (epstopdf)                    size: 21304 bytes
@@ -847,33 +1260,91 @@ Package epstopdf Info: Source file: <./Q_mu.eps>
 (epstopdf)             Command: <repstopdf --outfile=./Q_mu-eps-converted-to.pdf ./Q_mu.eps>
 (epstopdf)             \includegraphics on input line 131.
 Package epstopdf Info: Output file is already uptodate.
-<./Q_mu-eps-converted-to.pdf, id=247, 361.35pt x 252.945pt>
+<./Q_mu-eps-converted-to.pdf, id=181, 361.35pt x 252.945pt>
 File: ./Q_mu-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Q_mu-eps-converted-to.pdf>
 Package pdftex.def Info: ./Q_mu-eps-converted-to.pdf  used on input line 131.
 (pdftex.def)             Requested size: 361.35463pt x 252.94823pt.
-) (./main.bbl [12 <./Pack_I_fit-eps-converted-to.pdf>] [13 <./Q_mu-eps-converted-to.pdf>]) [14
+) (./main.bbl
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+))
 
-] (./main.aux)
+/home/3S-LAB/vquach/Documents/CSI/main.tex:474: LaTeX Error: \begin{table} on input line 318 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.474 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(./main.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6E4D2B71FB6A5A1C63B1C3600B5C8537;3896.
- ) 
-Here is how much of TeX's memory you used:
- 34268 strings out of 478287
- 796372 string characters out of 5849289
- 1195260 words of memory out of 5000000
- 51839 multiletter control sequences out of 15000+600000
- 482577 words of font info for 79 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 84i,12n,89p,751b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (15 pages, 628874 bytes).
-PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 74 named destinations out of 1000 (max. 500000)
- 244 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  6B2EBB8D9DBEA6626202E86636187E2E;2276.
+/home/3S-LAB/vquach/Documents/CSI/main.tex:474: You can't use `\end' in internal vertical mode.
+\enddocument ...cument/end}\deadcycles \z@ \@@end 
+                                                  
+l.474 \end{document}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:474: LaTeX Error: \begin{table} on input line 318 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.474 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/3S-LAB/vquach/Documents/CSI/main.tex:474: Missing } inserted.
+<inserted text> 
+                }
+l.474 \end{document}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> /home/3S-LAB/vquach/Documents/CSI/main.tex
+                                              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 37948 strings out of 478287
+ 868725 string characters out of 5849289
+ 1242067 words of memory out of 5000000
+ 55447 multiletter control sequences out of 15000+600000
+ 490851 words of font info for 85 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 85i,15n,93p,751b,709s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

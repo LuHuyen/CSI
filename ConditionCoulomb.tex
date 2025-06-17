@@ -24,7 +24,7 @@
   }{}%
   \@ifundefined{ifGPblacktext}{%
     \newif\ifGPblacktext
-    \GPblacktexttrue
+    \GPblacktextfalse
   }{}%
   % define a \g@addto@macro without @ in the name:
   \let\gplgaddtomacro\g@addto@macro
@@ -83,51 +83,49 @@
 \begin{picture}(7200.00,5040.00)%
     \gplgaddtomacro\gplbacktext{%
       \csname LTb\endcsname%%
-      \put(946,704){\makebox(0,0)[r]{\strut{}$0.5$}}%
-      \csname LTb\endcsname%%
-      \put(946,1390){\makebox(0,0)[r]{\strut{}$0.55$}}%
-      \csname LTb\endcsname%%
-      \put(946,2076){\makebox(0,0)[r]{\strut{}$0.6$}}%
-      \csname LTb\endcsname%%
-      \put(946,2762){\makebox(0,0)[r]{\strut{}$0.65$}}%
-      \csname LTb\endcsname%%
-      \put(946,3447){\makebox(0,0)[r]{\strut{}$0.7$}}%
-      \csname LTb\endcsname%%
-      \put(946,4133){\makebox(0,0)[r]{\strut{}$0.75$}}%
-      \csname LTb\endcsname%%
-      \put(946,4819){\makebox(0,0)[r]{\strut{}$0.8$}}%
-      \csname LTb\endcsname%%
-      \put(1078,484){\makebox(0,0){\strut{}$0$}}%
-      \csname LTb\endcsname%%
-      \put(2223,484){\makebox(0,0){\strut{}$2$}}%
-      \csname LTb\endcsname%%
-      \put(3368,484){\makebox(0,0){\strut{}$4$}}%
-      \csname LTb\endcsname%%
-      \put(4513,484){\makebox(0,0){\strut{}$6$}}%
-      \csname LTb\endcsname%%
-      \put(5658,484){\makebox(0,0){\strut{}$8$}}%
-      \csname LTb\endcsname%%
-      \put(6803,484){\makebox(0,0){\strut{}$10$}}%
+      \put(814,704){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(814,1218){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(814,1733){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(814,2247){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(814,2762){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(814,3276){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(814,3790){\makebox(0,0)[r]{\strut{}$1.2$}}%
+      \put(814,4305){\makebox(0,0)[r]{\strut{}$1.4$}}%
+      \put(814,4819){\makebox(0,0)[r]{\strut{}$1.6$}}%
+      \put(946,484){\makebox(0,0){\strut{}$0$}}%
+      \put(1783,484){\makebox(0,0){\strut{}$1$}}%
+      \put(2619,484){\makebox(0,0){\strut{}$2$}}%
+      \put(3456,484){\makebox(0,0){\strut{}$3$}}%
+      \put(4293,484){\makebox(0,0){\strut{}$4$}}%
+      \put(5130,484){\makebox(0,0){\strut{}$5$}}%
+      \put(5966,484){\makebox(0,0){\strut{}$6$}}%
+      \put(6803,484){\makebox(0,0){\strut{}$7$}}%
+      \colorrgb{0.58,0.00,0.83}%%
+      \settowidth{\gptboxwidth}{\widthof{$\mu = 0.1$}}
+	\advance\gptboxwidth by 2\fboxsep
+      \savebox{\gptboxtext}{\parbox[c][\totalheight+2\fboxsep]{\gptboxwidth}{\centering{$\mu = 0.1$}}}
+	\settowidth{\gptboxwidth}{\usebox{\gptboxtext}}
+	\advance\gptboxwidth by 2\fboxsep
+	\put(5130,1861){\makebox(0,0)[l]{\framebox[\gptboxwidth]{\usebox{\gptboxtext}}}}
+      \colorrgb{0.00,0.62,0.45}%%
+      \settowidth{\gptboxwidth}{\widthof{$\mu = 0.5$}}
+	\advance\gptboxwidth by 2\fboxsep
+      \savebox{\gptboxtext}{\parbox[c][\totalheight+2\fboxsep]{\gptboxwidth}{\centering{$\mu = 0.5$}}}
+	\settowidth{\gptboxwidth}{\usebox{\gptboxtext}}
+	\advance\gptboxwidth by 2\fboxsep
+	\put(1615,3276){\makebox(0,0)[l]{\framebox[\gptboxwidth]{\usebox{\gptboxtext}}}}
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(209,2761){\rotatebox{-270}{\makebox(0,0){\strut{}$e$}}}%
-      \put(3940,154){\makebox(0,0){\strut{}$\varepsilon_{yy}$ (\%)}}%
+      \put(209,2761){\rotatebox{-270}{\makebox(0,0){\strut{}$\left|f_t\right|$}}}%
+      \put(3874,154){\makebox(0,0){\strut{}$f_n$}}%
       \csname LTb\endcsname%%
-      \put(5960,2054){\makebox(0,0)[r]{\strut{}$\mu = 0$}}%
+      \put(5816,4646){\makebox(0,0)[r]{\strut{}$\varepsilon_{yy} = 0\%$}}%
       \csname LTb\endcsname%%
-      \put(5960,1820){\makebox(0,0)[r]{\strut{}$\mu = 0.1$}}%
-      \csname LTb\endcsname%%
-      \put(5960,1586){\makebox(0,0)[r]{\strut{}$\mu = 0.2$}}%
-      \csname LTb\endcsname%%
-      \put(5960,1352){\makebox(0,0)[r]{\strut{}$\mu = 0.3$}}%
-      \csname LTb\endcsname%%
-      \put(5960,1118){\makebox(0,0)[r]{\strut{}$\mu = 0.4$}}%
-      \csname LTb\endcsname%%
-      \put(5960,884){\makebox(0,0)[r]{\strut{}$\mu = 0.5$}}%
+      \put(5816,4426){\makebox(0,0)[r]{\strut{}$\varepsilon_{yy} = 11\%$}}%
     }%
     \gplbacktext
-    \put(0,0){\includegraphics[width={360.00bp},height={252.00bp}]{./RapportVides}}%
+    \put(0,0){\includegraphics[width={360.00bp},height={252.00bp}]{./ConditionCoulomb}}%
     \gplfronttext
   \end{picture}%
 \endgroup

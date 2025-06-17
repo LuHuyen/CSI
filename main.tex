@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt]{report}
-
+\usepackage[T1]{fontenc} 
 \usepackage[french]{babel}
 
 \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
@@ -15,7 +15,11 @@
 \usetikzlibrary{3d,calc}
 \pgfplotsset{compat=1.18}
 \usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\setlength{\parskip}{1em}
 \usepackage{cleveref}
+\usepackage{enumitem}
+\usepackage{animate}
 
 \title{Rapport d'activités}
 \author{Viet Anh QUACH}
@@ -26,106 +30,219 @@
 
 \setcounter{secnumdepth}{4}
 
-\chapter{Introduction de la thèse}
-% 
+\chapter{Étude bibliographique}
+\section{Introduction de la thèse}
 À cause du changement climatique, les risques naturels concernant l'écoulement gravitaire sur les zones montagneuses sont déclenchés de plus en plus fréquent à notre époque. 
 Récemmement, Le village de Blatten, dans les Alpes suisses est rayé de la carte sous l'effet de L’éboulement du glacier le 29 mai 2025. 
-Malhereusement, la caractéristique mécanique de ces écoulements gravitaires, reste mal comprise. 
+Malhereusement, la caractéristique mécanique de ces phénomenes, reste mal comprise. 
 Donc, mon projet de thèse, " Homogénéisation numérique à double échelle pour la modélisation demouvements gravitaires liés aux changements climatiques", se porte sur le développement d'une modélisation mécanique numérique pour l’écoulement de matériaux complexes. 
 La méthodologie numérique pour réaliser ce simulation est basé sur La modélisation en intégrer 2 échelle simultané, qui consiste 2 processus hiérarchiques de each other. 
 Pour cette homogénéisation, LA Méthode lagrangienne de Points Matériels (MPM) est choisisé à gestionner  La macroscopic, handle la mobilité du l'écoulement. 
-meanwhile la microscopic, assuré par Méthode des éléments discrètes (DEM) jou la role de Loi Constitutive Homogénéisée Numériquement (LCHN).
-Effectivement, La couplage entre 2 méthodes différents has been used prevelantly est efficacely, sans peut pas ignorer comme FEm x DEM \cite{nguyen2013modelisation}. Mais pour résourdre ce probleme du écoulement granulaire, les 2 adopté méthodes bright shinely et apporte des avantages significatifs.
-For instance, comme indiqué dans \autoref{fig:MPMxDEM}, la MPM prends en charge de la computation du gradient de déformation, envoyant au DEM à calculer la tensor du contrainte selon la formulation de LOVE,WEBER et la cycle continue. 
-Grace à l'acces du DEM, la résolution intergranulaire important du petit échelle est accesiblé et manipulé liberté afin de s'adapter au complexité du matériaux modelisé. 
-One peut changer la taille, shape, rigidité, ou bien quelle indice qui s'adapté au matériau d'étude le plus précis. 
-En meme temps, MPM reduit la complexité du prix chère du calcul en le considérant comme un object total mais sans facer à la subis de grand déformation qui distorte la maillage comme FEM.
+meanwhile la microscopic, assuré par Méthode des éléments discrètes (DEM) jou la role de Loi Constitutive Homogénéisée Numériquement (LCHN). Le détail est illustré dans les sections suivante.
 
-\vspace{2em}
-Au laboratoire 3SR, deux programmes de calcul en C++ pour la MPM et la DEM s'appellent respectivement ``MPMbox'' et ``3D\_sandstone'' et leur intégration est bien implémentée~\cite{richefeu2025mpmxdem}.
-La modélisation est aussi réalisée et prouvée précise, mais il reste des verrous à surmonter:
-\begin{itemize}
-    \item Équivalence des inerties aux deux échelles : Indeed, MPM qui a été developpé pour handle des problemes contact des objets \cite{nguyen2023material.}, porte bien l'effet dynamique. En revanche, DEM censure les réponses mécaniques dynamiques en attendant une stabilisation statique systématique \cite{nguyen2014fem}. Leur couplage fait emerge des Diverses nouvelles interrogations théoriques sur l'équivalence des inerties aux deux échelles together en meme temps, when it comes to computational calcul for a granular flow which is highly dynamic.
-    \item Conditions aux limites et initiales~: spécifiquement, dans la simulation DEM, la partie de condition aux limites périodiques n'est pas réalisée de manière pleinement satisfaisante, ce qui pose des pics anormaux de contrainte.
-\end{itemize}
-Le détail est bien illustré dans les sections suivante
-
-
-
-\chapter{Étude bibliographique}
 \section{MPM}
-\begin{itemize}
-\item Thèse: Application de la Méthode des Points Matériels aux phénomènes gravitaires - Fabio GRACIA DANIES
-\item A multi-scale, MPMxDEM, numerical modelling approach for geotechnical structures under severe loading - Sacha Duverger
-\item Material Point Method -- Vinh Phu NGUYEN, Alban de Vaucorbeil, Stephane Bordas
-\end{itemize}
+La Méthode de Point Matériel est une méthod numérical combiné Lagrangian particule et Eulerian maillage, used primarily dans dynamique de fluid. Parce que il est une Meshless Method(MME) or Meshfree Method, il provide solution of probmème in continuum mechanics while withstanding bien large déformation. 
+Dans logiciels utilisant dans ce thèse, on utilise la méthode Updated Lagrangian MPM, which means la background maillage, composed by noeuds is fixed et the milieu granulaire deplacé parmi it. 
+En effet, la noeud du maillage est déplacé pendant chaque étape calculation, though à leur terminaison, it came back to it premier position. Hence on peut dire la maillage est Eulerian, as mesh distortion never happens through out the simulation.
+Le milieu granulaire est discretise aux matériels points, et chaque point matériel carries une certain volume de l'objet et tous les preoperties physique e.g mass, position, vélocité and variables nécessaire pour la constitutive relation.
+Therefore les points est dans la Lagrangian framework, providing the state of the body at any time step \cite{danies2018application}.
+L'algorithme de base sur la ULMPM consiste de 4 steps principale:
+\begin{enumerate}
+\item À l'instant $t$, les informations de particules sont transférées vers les nœuds correspondants dans leur zone d'affectation sur le maillage.
+\item L'équation de la quantité de mouvement est résolue aux nœuds et les propriétés des nœuds sont mises à jour.
+\item Les informations sont transférées des nœuds mis à jour vers les particules, mettant à jour leurs propriétés (position, vélocité, contrainte, déformation, etc.).
+\item Le maillage est réinitialisé à la position initiale, et on continue le cycle à l'instant suivant $t + \delta t$.
+\end{enumerate}
+
 \section{DEM}
-\begin{itemize}
-      \item \cite{combe2023demlecture}
-      \item Thèse: Modélisation multi-échelle des matériaux granulaires frottant-cohésifs: Trung Kien NGUYEN
-\end{itemize}
+Originé de Molécular Dynamic, Discrète ÉLEMENTS MÉTHODE a pour objectif d’étudier les problèmes mis en jeu dans les matériaux granulaires et les géomatériaux. En revanche de méthode continuum as MPM ou FEM, Cette méthode approche le milieu granulaire comme les particules discrète.
+L’approche par DEM considère le milieu est assembmage de grains indépendamment les uns des autres et consiste à intégrer le mouvement des grains décrit par l’équation de la deuxième loi de Newton. pendant chaque pas de temps discrete, équation de équilibration sur grain $i$ denoted as : $F_i = m_i \dfrac{d^2x_i}{dt^2}, i = 1,\dots,N$.  
+C’est pourquoi on l’appelle aussi la famille des méthodes Newtoniennes.
+GRace à DEM, tous les effect de forces intergranulaire est capable de captured et ingetated selon la demande de bai toan. $F_i$ co the bao gom:
+\begin{itemize}[label=$\bullet$]
+    \item Composant $F_{ij}$ est la force exercée par les grains $j$ en contact avec $i$, qui consiste en :
+    \begin{itemize}[label=$\cdot$]
+        \item la force normale ($f_n$): Composante élastique ($f_{n,\mathrm{elas}}$), Composante d’amortissement ($f_{n,\mathrm{v}}$), Composante de liaison ($f_{n,\mathrm{bond}}$), Composante de cohésion de surface($f_{\mathrm{coh}}$)
+        \item la force tangentielle ($f_t$): Composante de frottement ($f_{t,\mathrm{fric}}$),Composante de liaison ($f_{t,\mathrm{bond}}$) 
+        \item la Moment ($M$)
+    \end{itemize}
+    \item Composant force externe $F_{ext}$ peut inclure :
+    \begin{itemize}
+        \item la force de gravité
+        \item la force d'Archimède dans un milieu de l'eau
+        \item \dots etc
+    \end{itemize}
+\end{itemize} 
+Dans l'étude actuellement, la shape de grain est sphere 3D mais One peut changer la taille, shape, rigidité, ou bien quelle indice qui s'adapté au matériau d'étude le plus précis. 
+C'est possible de diviser simplement l'algorithme de DEM en aussi 4 steps principale:
+\begin{enumerate}
+\item À l'instant $t$, avec la liste de position de graines, vérifions nous les contacts entre elles
+\item Calcul du torseur sur chaque grain 
+\item  Dung phuong trinh II Newton pour obtenir leurs accelation
+\item Calcul la position de particules à l'instant suivant $t + \delta t$ et on continue le cycle
+\end{enumerate}
+
 
 \section{Couplage MPMxDEM}
-\begin{itemize}
-      \item Thèse: Application de la Méthode des Points Matériels aux phénomènes gravitaires - Fabio GRACIA DANIES
-      \item \cite{richefeu2025mpmxdem}
-\end{itemize}
-\begin{figure}
+\begin{figure}[h]
 \centering
-\includegraphics[width=0.3\textwidth]{CouplageMPMxDEM.png}
+\includegraphics[width=0.5\textwidth]{CouplageMPMxDEM.png}
 \caption{Principe d’une approche à deux échelles hiérarchiques.\cite{projetderecherche}}
 \label{fig:MPMxDEM}
 \end{figure}
-La corrélation entre les deux échelles est décrite dans la \autoref{fig:MPMxDEM}. 
-% La partie à gauche représente un système MPM où on peut voir les
-% nœuds (bleus) de grille fixe, les points matériels (rouges). La partie à droite montre un volume
-% périodique DEM se déformant sous la demande d’un gradient de vitesse de la part d’un point
-% matériel, et répondant par une contrainte obtenue par homogénéisation numérique.
-
-\section{Compétences soutenues}
+Effectivement, La couplage entre 2 méthodes différents has been used prevelantly est efficacely, sans peut pas ignorer comme \emph{text} x DEM \cite{nguyen2013modelisation}. 
+Mais pour résourdre ce probleme du écoulement granulaire, les 2 adopté méthodes bright shinely et apporte des avantages significatifs.
+For instance, comme indiqué dans \autoref{fig:MPMxDEM}, la MPM (La partie à gauche) prends en charge de la computation du gradient de déformation $\nabla v$, envoyant au points mattériel (rouge) qui represent maintenant par une volume element represent (VER) DEM à calculer la tensor du contrainte $\sigma_p$ selon la formulation de LOVE,WEBER.
+Grace à l'acces du DEM, la résolution important du petit échelle est accesiblé et manipulé liberté afin de s'adapter au complexité du matériaux modelisé. 
+Ca permettre d'une mieux solution comparant avec une loi de constitutive calculus thong thuong.
+En meme temps, MPM reduit la complexité du prix chère du calcul en le considérant comme un object total mais sans facer à la subis de grand déformation qui distorte la maillage comme FEM.
+When combining, les deux méthode preserve their own advantages whereas cover each other weekness.
+Au laboratoire 3SR, deux programmes de calcul en C++ pour la MPM et la DEM s'appellent respectivement ``MPMbox'' et ``3D\_sandstone'' et leur intégration est bien implémentée~\cite{richefeu2025mpmxdem}.
+La modélisation est aussi réalisée et prouvée précise, mais il reste encore des verrous à surmonter:
 \begin{itemize}
-      \item C++
-      \item Gnuplot
-      \item LaTeX
+    \item Équivalence des inerties aux deux échelles : Indeed, MPM qui a été developpé pour handle des problemes contact rapide des objets \cite{nguyen2023material.}, porte bien l'effet dynamique. En revanche, DEM censure les réponses mécaniques dynamiques en attendant une stabilisation statique systématique \cite{nguyen2014fem}. Leur couplage fait emerge des Diverses nouvelles interrogations théoriques sur l'équivalence des inerties aux deux échelles together en meme temps, when it comes to computational calcul for a granular flow which is highly dynamic.
+    \item Conditions aux limites et initiales~: spécifiquement, dans la simulation DEM, la partie de condition aux limites périodiques n'est pas réalisée de manière pleinement satisfaisante, ce qui pose des pics abnormaux de contrainte.
 \end{itemize}
 
-% Inkscape
-% Writing thesis
-% 120 formations sur ADUM
-% Linux
-% Clavier français :D
+% \section{Compétences soutenues}
+% \begin{itemize}
+%       \item C++
+%       \item Gnuplot
+%       \item LaTeX
+%       \item % Inkscape
+% % Writing thesis
+% % 120 formations sur ADUM
+% % Linux
+% % Clavier français :D
+% \end{itemize}
+
 
 \chapter{L'étude pratique}
 \section{Simulation MPM}
 \subsection{Étude sur le cas statique - Déformation d'une poutre console}
-\subsubsection{PIC}
-\subsubsection{coefficient Poisson}
-\subsubsection{Longueur encastrée}
-\subsubsection{Discrétisation du maillage}
-\subsubsection{Comparaison entre calcul théorique et numérique}
-                                \begin{figure}
-                                   \centering\small\input{Deplacement_Poutre.tex}
-                                    \caption{Déplacement du poutre en Y-axis}
-                                \end{figure}
-\subsection{Étude sur le cas dynamique}
+En raison de vérifier la juste de la programme MPM, une poutre encastre console qui se deforme sous l'effet de self mass (gravité) est chosise à modeled. 
+On vérifie d'abord avec la loi de constitutive Hooke, d'autre dire loi elastic by comparison avec la équation calculus de resistance de materiaux.
+\begin{figure}[h]
+\centering
+\includegraphics[height=0.13\textheight]{Model_Poutre.png}
+\caption{Principe d’une approche à deux échelles hiérarchiques.\cite{projetderecherche}}
+\label{fig:ModelPoutre}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \small
+    \input{Deplacement_Poutre.tex}
+    \caption{Déplacement de la poutre selon l’axe Y}
+    \label{fig:deplacementPoutre}
+\end{figure}
+
+La flèche $f$ de la poutre est donnée par :
+
+\begin{equation}
+    f = \dfrac{-qx^2}{24EI} \times (x^2 - 4Lx + 6L^2)
+    \label{eq:fleche}
+\end{equation}
+
+où $q$ représente la charge uniformément répartie sur la longueur de la poutre, $x$ est la position considérée, $I$ est le moment d'inertie, et $E$ est le module de Young.
+
+On constate que la flèche calculée analytiquement selon l'équation théorique \eqref{eq:fleche} est en bon accord avec la déformation obtenue numériquement, comme le montre la ~\autoref{fig:deplacementPoutre}.
+C'est worth to noted that the longeur d'encastre and the discretasion du maillage dans ce modélisation MPM doit s'adapte au scale du objet.
+
+
+²\subsection{Étude sur le cas dynamique}
+
 
 
 \section{Simulation DEM: Compression triaxiale}
+
+    \begin{figure}[h]
+        \centering
+        \animategraphics[loop,autoplay,width=5cm]{10}{Triaxial_}{1}{8}
+        \caption{Déformation de la boite}
+        \label{fig:boiteDeformation}
+    \end{figure}
+On conduit la triaxiale test dans la section DEM, qui consiste de 2 étape: 
+\begin{itemize}
+\item préparation du échantillon: Prenons un échantillons - un box qui hold multiple non cohésion sphere particle inside, effectuons un processus de compression isotrope, avec différentes valeurs du coefficient de frottement $\mu$. 
+Dieu nay dan den la varies du dispersion du particule, creer des different echantillons de denses a lache according to evolution du $\mu$.
+\item prenant la sample obtenue de la precessus précédent, ilpmique une pression de confinement constante et une vitesse de déformation axiale imposée constante sur l'axe yy (la déformation du boite est dans la \autoref{fig:boiteDeformation}). 
+Premierement les caracteistique mecanique khac nhau according to luc chuan bi mau est observée.
+Deuxiememmn , as to be integraté dans la simulation DEMxMPM, l'etude sur la inertie est la main focus. échantillons est compressé dans une grande vitess, d'autre dire avec un grande nombre d'inertie.
+\end{itemize}
 \subsection{Le processus et les paramètres}
+\begin{frame}{Étude sur le critère de rupture de Coulomb}
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Symboles} & \textbf{Paramètres} & \textbf{Valeurs} & \textbf{Unité} \\ 
+\hline
+Nombre de particules & N & $15^3$ & $-$ \\  
+\hline
+Le rayon des particules & R & 0.003 $\div$ 0.005 & m \\  
+\hline
+Masse volumique & $\rho$  & 2500 & $kg/m^3$ \\
+\hline
+Contrainte isotrope & $\sigma_{xx} = \sigma_{zz}$ & 100, 200, 300 & kPa \\ 
+\hline
+Raideur normale et tangentielle & $k_n$ \& $k_t$ & $10^6, 2 \times 10^6, 3 \times 10^6$ & N/m \\ 
+\hline
+Niveau de raideur & $\kappa$ & 1000 & $-$ \\  
+\hline
+Coefficient de frottement & $\mu$ & 0.0 \& 0.4 & $-$ \\ 
+\hline
+Coefficient d'amortissement & $\alpha$  & 0.7 & $-$\\
+\hline
+\end{tabular}
+\caption{Valeurs des paramètres utilisés dans la compression isotrope.}
+\end{table}
+
+\[
+\text{Générer l'échantillon dense} \rightarrow \text{Compression isotrope} \rightarrow \text{Compression triaxiale}
+\]
+\end{frame}
+
+\begin{frame}{Étude sur le critère de rupture de Coulomb (Roche)}
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Symboles} & \textbf{Paramètres} & \textbf{Valeurs} & \textbf{Unité} \\ 
+\hline
+Nombre de particules & N & $15^3$ & $-$ \\  
+\hline
+Le rayon des particules & R & 0.003 $\div$ 0.005 & m \\  
+\hline
+Masse volumique & $\rho$  & 2500 & $kg/m^3$ \\
+\hline
+Contrainte isotrope & $\sigma_{xx} = \sigma_{zz}$ & 100, 200, 300 & kPa \\ 
+\hline
+Raideur normale et tangentielle & $k_n$ \& $k_t$ & $10^6, 2 \times 10^6, 3 \times 10^6$ & N/m \\ 
+\hline
+Niveau de raideur & $\kappa$ & 1000 & $-$ \\ 
+\hline
+Coefficient de frottement & $\mu$ & 0.5 & $-$ \\ 
+\hline
+Déformation axiale & $\varepsilon_{\text{yy}}$ &  10 & $\%$ \\ 
+\hline
+Nombre d’inertie & I & $10^{-3}$ & $-$ \\ 
+\hline
+Vitess imposéee & v & $10^{-3} \& 10^{-1}$ & m/s \\ 
+\hline
+Pas de temps & $d_t$  & $10^{-6} \& 10^{-8}$ & $-$\\
+\hline
+Taux de amortissement & $\frac{\eta}{\eta_{\max}}$  & 0.95 & $-$\\
+\hline
+\end{tabular}
+\caption{Valeurs des paramètres utilisés dans la compression triaxiale}
+\end{table}
+\end{frame}
 \subsection{Les caractéristiques mécaniques générales du sol}
 \subsubsection{La granulométrie et la fraction solide}
-% \begin{figure}[!h]
-%   \centering
-%   \subfloat[\texttt{Illustrator} and \texttt{LaTeXiT}]{\includegraphics{Taylor-bar-setup}\label{fig:figures11a}}
-%   \subfloat[\texttt{Inkscape} and PDF\_TEX]{\input{Taylor-bar-setup_pdf_tex.pdf_tex}\label{fig:figures11b}}
-%   \caption{Using \texttt{Illustrator} and \texttt{Inskcape} to produce vector images with \LaTeX\ symbols. The font in figure (a) is slightly different from the one in the text ($\nabla\cdot\boldsymbol{\sigma} = \boldsymbol{\mathit{0}}$), while it matches perfectly in figure (b).}
-%   \label{fig:figures11}
-% \end{figure}
-\subsubsection{La granulométrie et la fraction solide}
-La fraction solide caractère la dispersion des particules solide dans une volumne.
-\[
+La fraction solide caractère la dispersion des particules solide $V_s$ dans une volumne $V$.
+\begin{equation}
 \Phi = \dfrac{V_s}{V} = \dfrac{\sum\limits_{i = 1}^n \frac{4}{3}\pi R_i^3}{\det(h)}
-\]
+\end{equation}
                                 \begin{figure}
                                    \centering \small \input{fractonSolide.tex}
                                     \caption{La fraction solide}
@@ -136,51 +253,114 @@ La \autoref{fig:fractionSolideMax} montre que leur valeur maximale $\Phi_{\max}$
 \subsubsection{Les caractéristiques des échantillons denses}
 \subsubsection{Les caractéristiques des échantillons lâches}
 \subsubsection{L'état critique}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering \small
+        \scalebox{0.5}{\input{Contrainte-Deformation.tex}}
+        \caption{Déformation Volumique}
+        \label{fig:defvol}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering \small
+        \scalebox{0.5}{\input{Deformation_Volumique.tex}}
+        \caption{Courbe Contrainte-Déformation}
+        \label{fig:contrainte}
+    \end{subfigure}
+    \caption{Comparaison des réponses}
+    \label{fig:comparaison}
+\end{figure}
+
+\begin{equation}
+    \frac{q}{p} \approx \frac{\sigma_{yy} - \frac{1}{2} (\sigma_{xx} + \sigma_{zz})}{\frac{1}{2} (\sigma_{xx} + \sigma_{zz})}
+\end{equation}
+
+Dans la section 1 de ce chapitre, nous avons effectué une compression isotrope et créé des échantillons avec des contraintes internes égales dans les deux sens. A partir de là, on voit l'effet du coefficient de frottement sur les comportements du materiau granulaire comme Ncontact, Z et e et et les limites de ce que nous pouvons réaliser.
+Dans chapitre 2, nous pouvons voir qu’avec la différente valeur de $\mu$ dans compression isotrope, nous obtiendrons l’échantillons avec différent compacité donc ils se comportent de manière très différente.
+Concernant la contrainte, le pic augmente avec la compacité du VE. Un VE très lâche ne présente pas de pic. Pour des grandes déformations, tous les échantillons tendent vers un même palier (l’état critique).
+Ces simulations confirment alors la théorie de l’état critique: Une fois l’état critique est atteint, la déformation plastique peut augmenter infiniment, à une contrainte déviatorique constante. Les échantillons denses représentent des comportements contractants et puis dilatants, alors que ceux des échantillons lâches sont purement contractants.
 \paragraph{La force entre les grains}
-\paragraph{L'indice de vide}
-\paragraph{Le nombre de coordination}
+\begin{figure}[h!]
+    \centering
+    \subfloat[norme des forces]{\scalebox{0.33}{\small \input{Taux_ft_fn.tex}}\label{fig:palier_a}}
+    \subfloat[L’indice de vide]{\scalebox{0.33}{\small \input{RapportVides.tex}}\label{fig:palier_b}}
+    \subfloat[Nombre de Contact]{\scalebox{0.33}{\small \input{NombreContacts.tex}}\label{fig:palier_c}}
+  \caption{Palier}
+    \label{fig:Palier}
+\end{figure}
+Quand la déformation est suffisamment grande (environ 8 \%), les courbes tendent progressivement vers un même palier déterminé.
+
 \subsubsection{Cercle de Mohr}
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \scalebox{0.6}{\small \input{CercleMohr.tex}}
+        \caption{Dense}
+        \label{fig:palier_a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \scalebox{0.7}{\small \input{LACHE_CercleMohr.tex}}
+        \caption{Lâche}
+        \label{fig:palier_b}
+    \end{subfigure}
+    \caption{Cercle du Mohr xanh do tim vang}
+    \label{fig:CercleDuMohr}
+\end{figure}
 \subsubsection{Histoire du chargement}
 
 \subsection{Recherche sur l'impact dynamique}
 
 \subsubsection{Augmentation du nombre d'inertie (Montée la vitesse imposée)}
-
+    \begin{table}
+    \centering
+    \begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Symboles} & \textbf{Paramètres} & \textbf{Valeurs} & \textbf{Unité} \\ 
+    \hline
+    Nombre de particules & N & $15^3$ & -- \\  
+    \hline
+    Le rayon des particules & R & 0.003 $\div$ 0.005 & m \\  
+    \hline
+    Masse volumique & $\rho$  & 2500 & $\text{kg/m}^3$ \\
+    \hline
+    Contrainte isotrope & $\sigma_{xx} = \sigma_{zz}$ & 100, 200, 300 & kPa \\ 
+    \hline
+    Raideur normale et tangentielle & $k_n$ \& $k_t$ & \textcolor{black}{$3 \times 10^6$} & $\text{N/m}$ \\ 
+    \hline
+    Niveau de raideur & $\kappa$ & 1000 & -- \\ 
+    \hline
+    Coefficient de frottement & $\mu$ & 0.5 & -- \\ 
+    \hline
+    Déformation axiale & $\varepsilon_{\text{yy}}$ &  10 & $\%$ \\ 
+    \hline
+    Masse de la cellule périodique  & $h_{mass}$ &   \textcolor{black}{$7.13 \times 10^{-4}$}  & $\text{kg}$ \\ 
+    \hline
+    Nombre d’inertie & I & \textcolor{red}{$10^{-6}\  \& \ 10^{-2}$} & -- \\ 
+    \hline
+    Vitesse imposée & v & $10^{-3}\  \& \ 10 $ & m/s \\ 
+    \hline
+    Pas de temps & $d_t$  & $10^{-6}\  \& \ 10^{-10}$ & $\text{s}$\\
+    \hline
+    Coefficient d'amortissement & $\alpha$  & \textcolor{black}{$0.0 \ \& \ 0.7$} & --\\
+    \hline
+    \end{tabular}
+    \caption{Valeurs des paramètres utilisés dans la compression triaxiale}
+    \end{table}
 
 \section{Couplage\ldots}
-\subsection{How to add Tables}
 
-Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}. 
-
-\begin{table}
-\centering
-\begin{tabular}{l|r}
-Item & Quantity \\\hline
-Widgets & 42 \\
-Gadgets & 13
-\end{tabular}
-\caption{\label{tab:widgets}An example table.}
-\end{table}
-
-\subsection{How to add Lists}
-
-You can make lists with automatic numbering \dots
-
-\begin{enumerate}
-\item Like this,
-\item and like this.
-\end{enumerate}
-\dots or bullet points \dots
-\begin{itemize}
-\item Like this,
-\item and like this.
-\end{itemize}
 \chapter{Conclusion}
 
                                 \begin{figure}
                                     \centering
                                   \small
-                                  \input{RapportVides.tex}
+                                  \input{indiceVide.tex}
                                     \caption{L'indice de vide}
                                 \end{figure}
                                     
@@ -285,6 +465,7 @@ Les coefficients $\xi,\ C,\ \Phi_0$ sont déterminés empiriquement ($\xi \appro
     }
     \caption{$\mu(Q)$ avec $Q = f(\Phi_0, I)$}
 \end{figure}
+
 
 \bibliographystyle{plain}
 \bibliography{Bibliographie}

@@ -1,39 +1,17 @@
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduction de la thèse}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Étude bibliographique}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}MPM}{4}{section.2.1}%
-\contentsline {section}{\numberline {2.2}DEM}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Couplage MPMxDEM}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Compétences soutenues}{4}{section.2.4}%
-\contentsline {chapter}{\numberline {3}L'étude pratique}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Simulation MPM}{5}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Étude sur le cas statique - Déformation d'une poutre console}{5}{subsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.1.1}PIC}{5}{subsubsection.3.1.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.1.2}coefficient Poisson}{5}{subsubsection.3.1.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.1.3}Longueur encastrée}{5}{subsubsection.3.1.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.1.4}Discrétisation du maillage}{5}{subsubsection.3.1.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.1.5}Comparaison entre calcul théorique et numérique}{5}{subsubsection.3.1.1.5}%
-\contentsline {subsection}{\numberline {3.1.2}Étude sur le cas dynamique}{5}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Simulation DEM: Compression triaxiale}{5}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Le processus et les paramètres}{5}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Les caractéristiques mécaniques générales du sol}{5}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}La granulométrie et la fraction solide}{5}{subsubsection.3.2.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2.2}La granulométrie et la fraction solide}{5}{subsubsection.3.2.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.3}Les caractéristiques des échantillons denses}{5}{subsubsection.3.2.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.2.4}Les caractéristiques des échantillons lâches}{5}{subsubsection.3.2.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.2.5}L'état critique}{5}{subsubsection.3.2.2.5}%
-\contentsline {paragraph}{\numberline {3.2.2.5.1}La force entre les grains}{5}{paragraph.3.2.2.5.1}%
-\contentsline {paragraph}{\numberline {3.2.2.5.2}L'indice de vide}{7}{paragraph.3.2.2.5.2}%
-\contentsline {paragraph}{\numberline {3.2.2.5.3}Le nombre de coordination}{7}{paragraph.3.2.2.5.3}%
-\contentsline {subsubsection}{\numberline {3.2.2.6}Cercle de Mohr}{7}{subsubsection.3.2.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.2.7}Histoire du chargement}{7}{subsubsection.3.2.2.7}%
-\contentsline {subsection}{\numberline {3.2.3}Recherche sur l'impact dynamique}{7}{subsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.3.1}Augmentation du nombre d'inertie (Montée la vitesse imposée)}{7}{subsubsection.3.2.3.1}%
-\contentsline {section}{\numberline {3.3}Couplage\ldots }{7}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}How to add Tables}{7}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}How to add Lists}{7}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion}{8}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Comparaison des équations utilisées}{8}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Rhéologie $\mu (I)$ résiduel}{8}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Première méthode}{8}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Deuxième méthode}{12}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {1}Étude bibliographique}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction de la thèse}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}MPM}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}DEM}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Couplage MPMxDEM}{4}{section.1.4}%
+\contentsline {chapter}{\numberline {2}L'étude pratique}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Simulation MPM}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Étude sur le cas statique - Déformation d'une poutre console}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Étude sur le cas dynamique}{6}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Simulation DEM: Compression triaxiale}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Le processus et les paramètres}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Les caractéristiques mécaniques générales du sol}{7}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}La granulométrie et la fraction solide}{7}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Les caractéristiques des échantillons denses}{8}{subsubsection.2.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.3}Les caractéristiques des échantillons lâches}{8}{subsubsection.2.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.2.4}L'état critique}{8}{subsubsection.2.2.2.4}%
