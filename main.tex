@@ -35,7 +35,7 @@
 À cause du changement climatique, les risques naturels concernant l'écoulement gravitaire sur les zones montagneuses sont déclenchés de plus en plus fréquent à notre époque. 
 Récemmement, Le village de Blatten, dans les Alpes suisses est rayé de la carte sous l'effet de L’éboulement du glacier le 29 mai 2025. 
 Malhereusement, la caractéristique mécanique de ces phénomenes, reste mal comprise. 
-Donc, mon projet de thèse, " Homogénéisation numérique à double échelle pour la modélisation demouvements gravitaires liés aux changements climatiques", se porte sur le développement d'une modélisation mécanique numérique pour l’écoulement de matériaux complexes. 
+Donc, mon projet de thèse, " Homogénéisation numérique à double échelle pour la modélisation de mouvements gravitaires liés aux changements climatiques", se porte sur le développement d'une modélisation mécanique numérique pour l’écoulement de matériaux complexes. 
 La méthodologie numérique pour réaliser ce simulation est basé sur La modélisation en intégrer 2 échelle simultané, qui consiste 2 processus hiérarchiques de each other. 
 Pour cette homogénéisation, LA Méthode lagrangienne de Points Matériels (MPM) est choisisé à gestionner  La macroscopic, handle la mobilité du l'écoulement. 
 meanwhile la microscopic, assuré par Méthode des éléments discrètes (DEM) jou la role de Loi Constitutive Homogénéisée Numériquement (LCHN). Le détail est illustré dans les sections suivante.
@@ -58,13 +58,13 @@ L'algorithme de base sur la ULMPM consiste de 4 steps principale:
 Originé de Molécular Dynamic, Discrète ÉLEMENTS MÉTHODE a pour objectif d’étudier les problèmes mis en jeu dans les matériaux granulaires et les géomatériaux. En revanche de méthode continuum as MPM ou FEM, Cette méthode approche le milieu granulaire comme les particules discrète.
 L’approche par DEM considère le milieu est assembmage de grains indépendamment les uns des autres et consiste à intégrer le mouvement des grains décrit par l’équation de la deuxième loi de Newton. pendant chaque pas de temps discrete, équation de équilibration sur grain $i$ denoted as : $F_i = m_i \dfrac{d^2x_i}{dt^2}, i = 1,\dots,N$.  
 C’est pourquoi on l’appelle aussi la famille des méthodes Newtoniennes.
-GRace à DEM, tous les effect de forces intergranulaire est capable de captured et ingetated selon la demande de bai toan. $F_i$ co the bao gom:
+GRace à leur flexibilité, tous les effect de forces intergranulaire est capable de captured et ingetated selon la demande de bai toan. $F_i$ co the bao gom:
 \begin{itemize}[label=$\bullet$]
     \item Composant $F_{ij}$ est la force exercée par les grains $j$ en contact avec $i$, qui consiste en :
     \begin{itemize}[label=$\cdot$]
         \item la force normale ($f_n$): Composante élastique ($f_{n,\mathrm{elas}}$), Composante d’amortissement ($f_{n,\mathrm{v}}$), Composante de liaison ($f_{n,\mathrm{bond}}$), Composante de cohésion de surface($f_{\mathrm{coh}}$)
         \item la force tangentielle ($f_t$): Composante de frottement ($f_{t,\mathrm{fric}}$),Composante de liaison ($f_{t,\mathrm{bond}}$) 
-        \item la Moment ($M$)
+        % \item la Moment ($M$)
     \end{itemize}
     \item Composant force externe $F_{ext}$ peut inclure :
     \begin{itemize}
@@ -149,7 +149,7 @@ On constate que la flèche calculée analytiquement selon l'équation théorique
 C'est worth to noted that the longeur d'encastre and the discretasion du maillage dans ce modélisation MPM doit s'adapte au scale du objet.
 
 
-²\subsection{Étude sur le cas dynamique}
+%\subsection{Étude sur le cas dynamique}
 
 
 
@@ -163,14 +163,14 @@ C'est worth to noted that the longeur d'encastre and the discretasion du maillag
     \end{figure}
 On conduit la triaxiale test dans la section DEM, qui consiste de 2 étape: 
 \begin{itemize}
-\item préparation du échantillon: Prenons un échantillons - un box qui hold multiple non cohésion sphere particle inside, effectuons un processus de compression isotrope, avec différentes valeurs du coefficient de frottement $\mu$. 
-Dieu nay dan den la varies du dispersion du particule, creer des different echantillons de denses a lache according to evolution du $\mu$.
-\item prenant la sample obtenue de la precessus précédent, ilpmique une pression de confinement constante et une vitesse de déformation axiale imposée constante sur l'axe yy (la déformation du boite est dans la \autoref{fig:boiteDeformation}). 
+\item préparation du échantillon: Prenons un échantillons - un box qui hold multiple non cohésion sphere sec sand particle inside aléatoirement, effectuons un processus de compression isotrope, avec différentes valeurs du coefficient de frottement $\mu = 0 \div 1$. 
+Cela conduit à la variation de la dispersion des particules, créant différents échantillons allant de denses à lâches selon l'évolution du $\mu$.
+\item prenant la sample obtenue de la precessus précédent, ilpmique une contrainte de confinement constante avec un valeur constant de $\mu$ et une vitesse de déformation axiale imposée sur l'axe yy (la déformation du boite est dans la \autoref{fig:boiteDeformation}). 
 Premierement les caracteistique mecanique khac nhau according to luc chuan bi mau est observée.
 Deuxiememmn , as to be integraté dans la simulation DEMxMPM, l'etude sur la inertie est la main focus. échantillons est compressé dans une grande vitess, d'autre dire avec un grande nombre d'inertie.
 \end{itemize}
 \subsection{Le processus et les paramètres}
-\begin{frame}{Étude sur le critère de rupture de Coulomb}
+
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|c|}
@@ -181,65 +181,30 @@ Nombre de particules & N & $15^3$ & $-$ \\
 \hline
 Le rayon des particules & R & 0.003 $\div$ 0.005 & m \\  
 \hline
-Masse volumique & $\rho$  & 2500 & $kg/m^3$ \\
+Masse volumique & $\rho$  & 2500 & kg/m$^3$ \\
 \hline
 Contrainte isotrope & $\sigma_{xx} = \sigma_{zz}$ & 100, 200, 300 & kPa \\ 
 \hline
-Raideur normale et tangentielle & $k_n$ \& $k_t$ & $10^6, 2 \times 10^6, 3 \times 10^6$ & N/m \\ 
-\hline
-Niveau de raideur & $\kappa$ & 1000 & $-$ \\  
-\hline
-Coefficient de frottement & $\mu$ & 0.0 \& 0.4 & $-$ \\ 
-\hline
-Coefficient d'amortissement & $\alpha$  & 0.7 & $-$\\
-\hline
-\end{tabular}
-\caption{Valeurs des paramètres utilisés dans la compression isotrope.}
-\end{table}
-
-\[
-\text{Générer l'échantillon dense} \rightarrow \text{Compression isotrope} \rightarrow \text{Compression triaxiale}
-\]
-\end{frame}
-
-\begin{frame}{Étude sur le critère de rupture de Coulomb (Roche)}
-\begin{table}
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{Symboles} & \textbf{Paramètres} & \textbf{Valeurs} & \textbf{Unité} \\ 
-\hline
-Nombre de particules & N & $15^3$ & $-$ \\  
-\hline
-Le rayon des particules & R & 0.003 $\div$ 0.005 & m \\  
-\hline
-Masse volumique & $\rho$  & 2500 & $kg/m^3$ \\
-\hline
-Contrainte isotrope & $\sigma_{xx} = \sigma_{zz}$ & 100, 200, 300 & kPa \\ 
-\hline
-Raideur normale et tangentielle & $k_n$ \& $k_t$ & $10^6, 2 \times 10^6, 3 \times 10^6$ & N/m \\ 
+Raideur normale et tangentielle & $k_n$ \& $k_t$ & $10^6$, $2 \times 10^6$, $3 \times 10^6$ & N/m \\ 
 \hline
 Niveau de raideur & $\kappa$ & 1000 & $-$ \\ 
 \hline
 Coefficient de frottement & $\mu$ & 0.5 & $-$ \\ 
 \hline
-Déformation axiale & $\varepsilon_{\text{yy}}$ &  10 & $\%$ \\ 
+Déformation axiale & $\varepsilon_{\text{yy}}$ &  80 & \% \\ 
 \hline
-Nombre d’inertie & I & $10^{-3}$ & $-$ \\ 
+Nombre d’inertie & I & $10^{-6} \div 10^{-2}$ & $-$ \\ 
 \hline
-Vitess imposéee & v & $10^{-3} \& 10^{-1}$ & m/s \\ 
-\hline
-Pas de temps & $d_t$  & $10^{-6} \& 10^{-8}$ & $-$\\
-\hline
-Taux de amortissement & $\frac{\eta}{\eta_{\max}}$  & 0.95 & $-$\\
+Pas de temps & $d_t$  & $10^{-6} \div 10^{-10}$ & $-$\\
 \hline
 \end{tabular}
 \caption{Valeurs des paramètres utilisés dans la compression triaxiale}
 \end{table}
-\end{frame}
+
 \subsection{Les caractéristiques mécaniques générales du sol}
 \subsubsection{La granulométrie et la fraction solide}
-La fraction solide caractère la dispersion des particules solide $V_s$ dans une volumne $V$.
+La fraction solide caractère la dispersion des particules solide $V_s$ dans une volumne $V$. 
+C'est un l'indice important dans la partie de rhéologie de l'écoulement.
 \begin{equation}
 \Phi = \dfrac{V_s}{V} = \dfrac{\sum\limits_{i = 1}^n \frac{4}{3}\pi R_i^3}{\det(h)}
 \end{equation}
@@ -250,23 +215,25 @@ La fraction solide caractère la dispersion des particules solide $V_s$ dans une
                                 \end{figure}
 
 La \autoref{fig:fractionSolideMax} montre que leur valeur maximale $\Phi_{\max}$ pour une dispersion désordonnée de sphères en contact dense est approximée à 0.64~\cite{combe2023demlecture}.
-\subsubsection{Les caractéristiques des échantillons denses}
-\subsubsection{Les caractéristiques des échantillons lâches}
+1 cach truc quan, truc hoanh the hien cac gia tri $\mu$ tang dan tu 0 den 1 trong qua trinh chuan bi mau, tuong tu voi viec ta thay tren do thi rang mau dang giam dan ve do chat, since $\mu$ cang lon thi su sap xep cua cac hat cang kho xay ra hon.
+
+
+\subsubsection{Les comportements des échantillons de denses à laches}
 \subsubsection{L'état critique}
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \centering \small
         \scalebox{0.5}{\input{Contrainte-Deformation.tex}}
-        \caption{Déformation Volumique}
-        \label{fig:defvol}
+        \caption{Contrainte-Déformation}
+        \label{fig:contrainte}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering \small
         \scalebox{0.5}{\input{Deformation_Volumique.tex}}
-        \caption{Courbe Contrainte-Déformation}
-        \label{fig:contrainte}
+        \caption{Déformation Volumique}
+        \label{fig:defvo}
     \end{subfigure}
     \caption{Comparaison des réponses}
     \label{fig:comparaison}
@@ -274,13 +241,10 @@ La \autoref{fig:fractionSolideMax} montre que leur valeur maximale $\Phi_{\max}$
 
 \begin{equation}
     \frac{q}{p} \approx \frac{\sigma_{yy} - \frac{1}{2} (\sigma_{xx} + \sigma_{zz})}{\frac{1}{2} (\sigma_{xx} + \sigma_{zz})}
+    \label{eq:qformulation}
 \end{equation}
 
-Dans la section 1 de ce chapitre, nous avons effectué une compression isotrope et créé des échantillons avec des contraintes internes égales dans les deux sens. A partir de là, on voit l'effet du coefficient de frottement sur les comportements du materiau granulaire comme Ncontact, Z et e et et les limites de ce que nous pouvons réaliser.
-Dans chapitre 2, nous pouvons voir qu’avec la différente valeur de $\mu$ dans compression isotrope, nous obtiendrons l’échantillons avec différent compacité donc ils se comportent de manière très différente.
-Concernant la contrainte, le pic augmente avec la compacité du VE. Un VE très lâche ne présente pas de pic. Pour des grandes déformations, tous les échantillons tendent vers un même palier (l’état critique).
-Ces simulations confirment alors la théorie de l’état critique: Une fois l’état critique est atteint, la déformation plastique peut augmenter infiniment, à une contrainte déviatorique constante. Les échantillons denses représentent des comportements contractants et puis dilatants, alors que ceux des échantillons lâches sont purement contractants.
-\paragraph{La force entre les grains}
+paragraph{La force entre les grains}
 \begin{figure}[h!]
     \centering
     \subfloat[norme des forces]{\scalebox{0.33}{\small \input{Taux_ft_fn.tex}}\label{fig:palier_a}}
@@ -289,7 +253,12 @@ Ces simulations confirment alors la théorie de l’état critique: Une fois l�
   \caption{Palier}
     \label{fig:Palier}
 \end{figure}
-Quand la déformation est suffisamment grande (environ 8 \%), les courbes tendent progressivement vers un même palier déterminé.
+Avec l'aide de courbes de contrainte (figure \ref{fig:comparaison}), maintenant la différent comportement de l'échantillons est visible.
+nous pouvons voir qu’avec la différente valeur de $\mu$ dans compression isotrope, nous obtiendrons l’échantillons avec différent compacité donc ils se comportent de manière très différente.
+Selon \autoref{fig:Palier}, Quand la déformation est suffisamment grande (environ 8 $\%$), les courbes de taux norme de force, l'indice de vide et nombre de contact (tuong tu nombre de coordination) tendent progressivement vers un même palier déterminé.
+Concernant la contrainte, le pic augmente avec la compacité du VE. Un VE très lâche ne présente pas de pic. Pour des grandes déformations, tous les échantillons tendent vers un même palier (l’état critique).
+Ces simulations confirment alors la théorie de l’état critique du mécanique de sol: Une fois l’état critique est atteint, la déformation plastique peut augmenter infiniment, à une contrainte constante et l'indice de vide constant.Les échantillons denses représentent des comportements contractants et puis dilatants, alors que ceux des échantillons lâches sont purement contractants.
+Cette état est la région utisant pour la simulation de écoulement.
 
 \subsubsection{Cercle de Mohr}
 \begin{figure}[h!]
@@ -307,51 +276,29 @@ Quand la déformation est suffisamment grande (environ 8 \%), les courbes tenden
         \caption{Lâche}
         \label{fig:palier_b}
     \end{subfigure}
-    \caption{Cercle du Mohr xanh do tim vang}
+    \caption{Cercle du Mohr d'un l'échantillon dens au pic: lé cercles du couleur bleu, rouge, vert represent $\sigma_3 = 100, 200, 300$ respectively}
     \label{fig:CercleDuMohr}
 \end{figure}
-\subsubsection{Histoire du chargement}
+
+
+
+Cercle du Mohr est une méthode bien connu pour identifier suc khang cat lon nhat cua dat. Tu do thi cua no, one peut identifier : La cohésion $c$ et goc ma sat trong $\varphi$
+\begin{equation}
+    \tau = \sigma_n * \tan(\varphi) + C
+    \label{eq:tangentMohr}
+\end{equation}
+Diem quadrature ben trai cua moi duong tron dans la figure \ref{fig:CercleDuMohr} the hien ung suat $\sigma_3$,con diem ben phai $\sigma_2$ the hien gia tri ung suat tai vung dang xet.
+Khi thuc hien thi nghiem compression triaxiale voi cung mot mau ma thay doi $\sigma_3$, multiples cercles peut etre dessine et finalement la droite tangente aux cercles co phuong trinh nhu \ref{eq:tangentMohr}.
+O day ta quan tam den 2 vung quan trong nhat la pic va l'état crique.
+Doi voi mot mau chat, Ta co the hieu pic (vi tri ung suat cao nhat) the hien gia tri ung suat lon nhat truoc khi dat bi pha hoai boi luc cat. 
+La pente de la droite tangente au cercles, hay $\tan(\varphi) = \mu$, se cho thay su ma sat o giai doan dang xet. 
+Normalement on considère que le mu résiduel est un mu stationnaire. 
+Va vi mau cua chung ta la sable sec, diem giao giua 
 
 \subsection{Recherche sur l'impact dynamique}
 
 \subsubsection{Augmentation du nombre d'inertie (Montée la vitesse imposée)}
-    \begin{table}
-    \centering
-    \begin{table}
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-    \hline
-    \textbf{Symboles} & \textbf{Paramètres} & \textbf{Valeurs} & \textbf{Unité} \\ 
-    \hline
-    Nombre de particules & N & $15^3$ & -- \\  
-    \hline
-    Le rayon des particules & R & 0.003 $\div$ 0.005 & m \\  
-    \hline
-    Masse volumique & $\rho$  & 2500 & $\text{kg/m}^3$ \\
-    \hline
-    Contrainte isotrope & $\sigma_{xx} = \sigma_{zz}$ & 100, 200, 300 & kPa \\ 
-    \hline
-    Raideur normale et tangentielle & $k_n$ \& $k_t$ & \textcolor{black}{$3 \times 10^6$} & $\text{N/m}$ \\ 
-    \hline
-    Niveau de raideur & $\kappa$ & 1000 & -- \\ 
-    \hline
-    Coefficient de frottement & $\mu$ & 0.5 & -- \\ 
-    \hline
-    Déformation axiale & $\varepsilon_{\text{yy}}$ &  10 & $\%$ \\ 
-    \hline
-    Masse de la cellule périodique  & $h_{mass}$ &   \textcolor{black}{$7.13 \times 10^{-4}$}  & $\text{kg}$ \\ 
-    \hline
-    Nombre d’inertie & I & \textcolor{red}{$10^{-6}\  \& \ 10^{-2}$} & -- \\ 
-    \hline
-    Vitesse imposée & v & $10^{-3}\  \& \ 10 $ & m/s \\ 
-    \hline
-    Pas de temps & $d_t$  & $10^{-6}\  \& \ 10^{-10}$ & $\text{s}$\\
-    \hline
-    Coefficient d'amortissement & $\alpha$  & \textcolor{black}{$0.0 \ \& \ 0.7$} & --\\
-    \hline
-    \end{tabular}
-    \caption{Valeurs des paramètres utilisés dans la compression triaxiale}
-    \end{table}
+
 
                                     \begin{frame}{L'étude sur l'effet dynamique}
     \begin{columns}
