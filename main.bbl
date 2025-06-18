@@ -1,36 +1,46 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{}
 
-\bibitem{combe2023demlecture}
-Gaël Combe.
+\bibitem[Combe, 2023]{combe2023demlecture}
+Combe, G. (2023).
 \newblock {DEM} lecture.
-\newblock \url{https://cloud.univ-grenoble-alpes.fr/s/Lbdg6qWwXNqFZQo}, 2023.
+\newblock \url{https://cloud.univ-grenoble-alpes.fr/s/Lbdg6qWwXNqFZQo}.
 \newblock Diapositive.
 
-\bibitem{danies2018application}
-Fabio~Gracia Danies.
+\bibitem[Danies, 2018]{danies2018application}
+Danies, F.~G. (2018).
 \newblock {\em Application de la M{\'e}thode des Points Mat{\'e}riels aux
   ph{\'e}nom{\`e}nes gravitaires}.
-\newblock PhD thesis, Universit{\'e} Grenoble Alpes (ComUE), 2018.
+\newblock PhD thesis, Universit{\'e} Grenoble Alpes (ComUE).
 
-\bibitem{nguyen2013modelisation}
-Trung~Kien Nguyen.
+\bibitem[Jop et~al., 2006]{jop2006constitutive}
+Jop, P., Forterre, Y., and Pouliquen, O. (2006).
+\newblock A constitutive law for dense granular flows.
+\newblock {\em Nature}, 441(7094):727--730.
+
+\bibitem[Nguyen, 2013]{nguyen2013modelisation}
+Nguyen, T.~K. (2013).
 \newblock {\em Mod{\'e}lisation multi-{\'e}chelle des mat{\'e}riaux granulaires
   frottant-coh{\'e}sifs}.
-\newblock PhD thesis, Universit{\'e} de Grenoble, 2013.
+\newblock PhD thesis, Universit{\'e} de Grenoble.
 
-\bibitem{nguyen2014fem}
-Trung~Kien Nguyen, Ga{\"e}l Combe, Denis Caillerie, and Jacques Desrues.
+\bibitem[Nguyen et~al., 2014]{nguyen2014fem}
+Nguyen, T.~K., Combe, G., Caillerie, D., and Desrues, J. (2014).
 \newblock Fem$\times$ dem modelling of cohesive granular materials: numerical
   homogenisation and multi-scale simulations.
-\newblock {\em Acta Geophysica}, 62:1109--1126, 2014.
+\newblock {\em Acta Geophysica}, 62:1109--1126.
 
-\bibitem{richefeu2025mpmxdem}
-V.~Richefeu and G.~Combe.
+\bibitem[Nguyen et~al., 2023]{nguyen2023material}
+Nguyen, V.~P., De~Vaucorbeil, A., and Bordas, S. (2023).
+\newblock The material point method.
+\newblock {\em Cham: Springer International Publishing}.
+
+\bibitem[Richefeu and Combe, 2025]{richefeu2025mpmxdem}
+Richefeu, V. and Combe, G. (2025).
 \newblock {MPM}{×}{DEM} programme.
-\newblock \url{https://github.com/richefeu/mpmxdem}, 2025.
+\newblock \url{https://github.com/richefeu/mpmxdem}.
 
-\bibitem{projetderecherche}
-V.~Richefeu, G.~Combe, and T.K. Nguyen.
-\newblock Projet de reserche, 2024.
+\bibitem[Richefeu et~al., 2024]{projetderecherche}
+Richefeu, V., Combe, G., and Nguyen, T. (2024).
+\newblock Projet de reserche.
 
 \end{thebibliography}
