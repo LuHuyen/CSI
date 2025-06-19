@@ -1,14 +1,15 @@
 \documentclass[a4paper,12pt]{report}
 \usepackage[T1]{fontenc} 
-\usepackage[french]{babel}
+\usepackage[british, main = french]{babel}
 
 \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 % Useful packages
-\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{amsmath, amsfonts, amssymb, mathtools,mathrsfs,stmaryrd,titletoc}
 \usepackage{graphicx}
 \usepackage{color}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[bookmarks=true,colorlinks=true,linkcolor=blue,citecolor=red,backref=page]{hyperref}
+\usepackage{xurl}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{tikz}
@@ -17,25 +18,66 @@
 \usepackage[utf8]{inputenc}
 \usepackage{subcaption}
 \setlength{\parskip}{1em}
-\usepackage{cleveref}
 \usepackage{enumitem}
 \usepackage{animate}
-\usepackage{natbib} % thêm vào đầu file
+\usepackage[square]{natbib}
 \usepackage{titling}
 
+
+
+% extra
+    \usepackage{tabularx}    % tables
+    \usepackage{booktabs}    % better tables
+    \usepackage{multirow}    % multi-row tables
+     \usepackage[most]{tcolorbox} %colored/framed text boxes with headline (see Box 1)  
+         \usepackage{float}         % make new float environment such as boxes (captioned)
+    \usepackage{listings}      % insert source code \eg LaTeX and Python codes 
+    \usepackage{algorithm}     % flow wrapper for algorithm
+    \usepackage{algpseudocode} % second algorithm typesetting environment
+    \usepackage{nicefrac} 
+        \usepackage{numprint}             % \numprint{10000} => 10 000 not 10000
+    \usepackage[title,titletoc,toc]{appendix}
+\usepackage[french,english]{cleveref} %Basically, cleveref must be loaded last.
+% \autorefname{figure}{\textcolor{blue}{la figure}}{\textcolor{blue}{les figures}}
+% \autorefname{figure}{\textcolor{blue}{La figure}}{\textcolor{blue}{Les figures}}
+% \autorefname{table}{\textcolor{blue}{le tableau}}{\textcolor{blue}{les tableaux}}
+% \autorefname{table}{\textcolor{blue}{Le tableau}}{\textcolor{blue}{Les tableaux}}
+% \autorefname{equation}{\textcolor{blue}{l'équation}}{\textcolor{blue}{les équations}}
+% \autorefname{equation}{\textcolor{blue}{L'équation}}{\textcolor{blue}{Les équations}}
+% \autorefname{section}{\textcolor{blue}{la section}}{\textcolor{blue}{les sections}}
+% \autorefname{section}{\textcolor{blue}{La section}}{\textcolor{blue}{Les sections}}
+% \autorefname{subsection}{\textcolor{blue}{la sous-section}}{\textcolor{blue}{les sous-sections}}
+% \autorefname{subsection}{\textcolor{blue}{La sous-section}}{\textcolor{blue}{Les sous-sections}}
+
+% \autorefname{figure}{\textcolor{blue}{figure}}{\textcolor{blue}{figures}}
+% \autorefname{figure}{\textcolor{blue}{Figure}}{\textcolor{blue}{Figures}}
+% \autorefname{table}{\textcolor{blue}{tableau}}{\textcolor{blue}{tableaux}}
+% \autorefname{table}{\textcolor{blue}{Tableau}}{\textcolor{blue}{Tableaux}}
+% \autorefname{equation}{\textcolor{blue}{équation}}{\textcolor{blue}{équations}}
+% \autorefname{equation}{\textcolor{blue}{Équation}}{\textcolor{blue}{Équations}}
+% \autorefname{section}{\textcolor{blue}{section}}{\textcolor{blue}{sections}}
+% \autorefname{section}{\textcolor{blue}{Section}}{\textcolor{blue}{Sections}}
+% \autorefname{subsection}{\textcolor{blue}{sous-section}}{\textcolor{blue}{sous-sections}}
+% \autorefname{subsection}{\textcolor{blue}{Sous-section}}{\textcolor{blue}{Sous-sections}}
+\renewcommand{\figureautorefname}{figure}
+\renewcommand{\tableautorefname}{tableau}
+\renewcommand{\sectionautorefname}{section}
+\renewcommand{\subsectionautorefname}{sous-section}
+\renewcommand{\equationautorefname}{équation}
 \title{Rapport d'activités -- 1\textsuperscript{ère} année}
 \author{Viet Anh QUACH}
-\date{\today}
 \begin{document}
 \maketitle
 \tableofcontents
 
-\setcounter{secnumdepth}{4}
+
 
 \chapter{Étude bibliographique}
 \section{Introduction de la thèse}
 Avec le changement climatique, les risques naturels liés aux écoulements gravitaires en zones montagneuses deviennent de plus en plus fréquents et intenses.  
-Récemment, le village de Blatten, situé dans les Alpes suisses, a été rayé de la carte à la suite de l’éboulement d’un glacier survenu le 29 mai 2025.  
+
+
+Récemment, le village de Blatten, situé dans les Alpes suisses, a été rayé de la carte à la suite de l’éboulement d’un glacier survenu le 29 mai 2025 \footnote{\url{https://www.lemonde.fr/planete/article/2025/05/29/suisse-l-effondrement-d-un-glacier-detruit-le-village-de-blatten_6609070_3244.html}}.  
 
 Malheureusement, les mécanismes fondamentaux de ces phénomènes restent encore mal compris.  
 Dans ce contexte, mon projet de thèse intitulé « Homogénéisation numérique à double échelle pour la modélisation de mouvements gravitaires liés aux changements climatiques » vise à développer une modélisation mécanique numérique adaptée à l’écoulement de matériaux granulaires complexes.
@@ -46,9 +88,9 @@ Parallèlement, à l’échelle microscopique, la Méthode des Éléments Discre
 
 Les détails de cette approche sont présentés dans les sections suivantes.
 
-\section{Méthode des Points Matériels}
+\section{Méthode des Points Matériels (MPM)}
 
-La Méthode des Points Matériels (MPM) est une méthode numérique hybride combinant une description lagrangienne des particules et un maillage eulérien en arrière-plan. Elle est principalement utilisée en dynamique des fluides et en mécanique des milieux continus, notamment dans les cas de grandes déformations, grâce à sa nature sans maillage fixe (Meshless ou Meshfree Method).
+La Méthode des Points Matériels (MPM) est une méthode numérique hybride combinant une description lagrangienne des particules et un maillage eulérien en arrière-plan. Elle est principalement utilisée en dynamique des fluides et en mécanique des milieux continus, notamment dans les cas de grandes déformations, grâce à sa nature sans maillage fixe (Meshless ou Meshfree Method)\citep{duverger2023multi}.
 Dans le cadre de cette thèse, on utilise la variante dite Updated Lagrangian MPM (ULMPM). Cette approche repose sur un maillage de fond constitué de n\oe uds fixes, à travers lequel se déplace le milieu granulaire. En pratique, les n\oe uds du maillage sont déplacés pendant chaque pas de temps pour les calculs intermédiaires, puis réinitialisés à leur position d’origine à la fin de chaque itération. Cela permet de considérer le maillage comme étant eulérien, dans la mesure où il ne subit jamais de distorsion permanente au cours de la simulation.
 Le matériau granulaire est discrétisé en points matériels, chacun représentant un volume du matériau et transportant l’ensemble de ses propriétés physiques (masse, position, vitesse, contraintes, variables internes nécessaires aux lois de comportement, etc.). Ces points suivent un cadre lagrangien, fournissant une description de l’état des particules à tout instant \citep{danies2018application}.
 L’algorithme de base de l’ULMPM se décompose en quatre étapes principales:
@@ -61,19 +103,26 @@ L’algorithme de base de l’ULMPM se décompose en quatre étapes principales:
 \end{enumerate}
 
 
-\section{La méthode des éléments discrets}
+\section{Méthode des Éléments Dicretes (DEM)}
 Originé des dynamiques moléculaires, la Méthode des Éléments Discrets (DEM) a été développée dans le but d'étudier les problèmes mécaniques liés aux matériaux granulaires et géomatériaux. Contrairement aux méthodes en milieu continu telles que MPM ou FEM, DEM modélise le matériau comme un ensemble de particules discrètes.
 
 Dans cette approche, le milieu granulaire est représenté par un assemblage de grains interagissant individuellement. Le mouvement de chaque grain est régi par la seconde loi de Newton, formulée comme suit pour le grain $i$ :
+\begin{equation}
+    F_i = m_i \dfrac{d^2x_i}{dt^2}, \quad i = 1,\dots,N
+    \label{eq:DEMequation}
+\end{equation}
 
-\[
-F_i = m_i \dfrac{d^2x_i}{dt^2}, \quad i = 1,\dots,N
-\]
+C’est pourquoi la DEM appartient à la famille des méthodes newtoniennes \citep{radjai2011discrete}. Grâce à sa flexibilité, elle permet de prendre en compte tous les effets des forces intergranulaires, ajustables selon la nature du problème. La force $F_i$ appliquée à la particule $i$ peut comprendre :
 
-C’est pourquoi la DEM appartient à la famille des méthodes newtoniennes. Grâce à sa flexibilité, elle permet de prendre en compte tous les effets des forces intergranulaires, ajustables selon la nature du problème. La force $F_i$ appliquée à la particule $i$ peut comprendre :
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.35\textwidth]{DEM.jpg}
+\caption{Deux grains i et j en contact}
+\label{fig:contactDEM}
+\end{figure}
 
 \begin{itemize}[label=$\bullet$]
-    \item Les forces de contact $F_{ij}$ exercées par les grains $j$ en contact avec $i$, comprenant :
+    \item Les forces de contact $F_{ij}$ exercées par les grains $j$ en contact avec $i$(la ~\autoref{fig:contactDEM}), comprenant :
     \begin{itemize}[label=$\cdot$]
         \item Force normale $f_n$ : composée d’une contribution élastique ($f_{n,\mathrm{elas}}$), d’un amortissement visqueux ($f_{n,\mathrm{v}}$), d’une liaison intergranulaire ($f_{n,\mathrm{bond}}$), et éventuellement d’une composante de cohésion de surface ($f_{\mathrm{coh}}$).
         \item Force tangentielle $f_t$ : comprenant la composante de frottement ($f_{t,\mathrm{fric}}$) et la composante de liaison tangente ($f_{t,\mathrm{bond}}$).
@@ -107,48 +156,57 @@ L’algorithme de base de la DEM peut être divisé en quatre étapes principale
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{CouplageMPMxDEM.png}
-\caption{Principe d’une approche à deux échelles hiérarchiques~\citep{projetderecherche}.}
+\caption{Principe d’une approche à deux échelles hiérarchiques  \citep{projetderecherche}.}
 \label{fig:MPMxDEM}
 \end{figure}
 
-Le couplage entre deux méthodes numériques différentes, comme le couplage FEM$\times$DEM~\citep{nguyen2013modelisation}, a déjà été largement utilisé et s’est avéré très efficace.  
+Le couplage entre deux méthodes numériques différentes, comme le couplage FEM$\times$DEM  \citep{nguyen2013modelisation}, a déjà été largement utilisé et s’est avéré très efficace  \citep{Nguyen09092024}.  
 Dans le cadre de la modélisation des écoulements granulaires, le couplage entre la méthode des points matériels (MPM) et la méthode des éléments discrets (DEM) apparaît particulièrement pertinent, car il permet de tirer parti des atouts respectifs de chaque méthode.
 
-Comme illustré sur la \autoref{fig:MPMxDEM}, la méthode MPM (partie gauche) se charge du calcul des indices à l’échelle macroscopique, notamment du gradient de vitesse $\nabla v$. Ces informations sont ensuite transmises aux points matériels rouges, qui sont ici associés à un volume élémentaire représentatif (VER) modélisé par DEM. Ce modèle discret permet de calculer le tenseur des contraintes $\sigma_p$ selon la formulation classique (Love-Weber).
+Comme illustré sur la \autoref{fig:MPMxDEM}, la méthode MPM (partie gauche) se charge du calcul des indices à l’échelle macroscopique, notamment du gradient de vitesse $\nabla v$. Ces informations sont ensuite transmises aux points matériels rouges, qui sont ici associés à un volume élémentaire représentatif (VER) modélisé par DEM. Ce modèle discret permet de calculer le tenseur des contraintes $\sigma_p$ selon la formulation classique Love-Weber plus le terme cinétique $\sum m \dot{r} \otimes \dot{r} $ \citep{Ozenda2025Inertia}.
 
 Grâce à l’intégration du modèle DEM au niveau microscopique, il devient possible de résoudre localement les comportements complexes des matériaux, en tenant compte de la microstructure et des interactions entre grains. Cela permet d’aller au-delà des limitations des lois de comportement analytiques classiques, souvent trop simplifiées pour capturer les effets fins liés à la nature granulaire.
 
 Parallèlement, la MPM offre une solution efficace pour représenter le mouvement global du matériau sans souffrir des problèmes de distorsion de maillage, fréquents dans les méthodes lagrangiennes classiques comme la FEM. La combinaison des deux approches permet ainsi de préserver les avantages de chacune tout en compensant leurs faiblesses respectives.
 
-Au laboratoire 3SR, deux programmes de calcul indépendants en \texttt{C++} ont été développés pour implémenter respectivement la MPM et la DEM. Il s'agit de \texttt{MPMbox} pour la MPM, et de \texttt{3D\_sandstone} pour la DEM. Leur intégration dans une plateforme de calcul multi-échelle est désormais bien établie~\citep{richefeu2025mpmxdem}, avec des résultats prometteurs. Toutefois, certains verrous scientifiques restent à résoudre :
+Au laboratoire 3SR, deux programmes de calcul indépendants en \texttt{C++} ont été développés pour implémenter respectivement la MPM et la DEM. Il s'agit de \texttt{MPMbox} pour la MPM, et de \texttt{3D\_sandstone} pour la DEM. Leur intégration dans une plateforme de calcul multi-échelle est désormais bien établie  \citep{richefeu2025mpmxdem}, avec des résultats prometteurs. Toutefois, certains verrous scientifiques restent à résoudre :
 
 \begin{itemize}
     \item \textbf{Équivalence des inerties aux deux échelles:}  
-    La méthode MPM, conçue à l’origine pour traiter des problèmes de contact dynamique~\citep{nguyen2023material}, intègre naturellement les effets d’inertie. En revanche, la DEM tend à filtrer les réponses dynamiques en attendant une stabilisation statique~\citep{nguyen2014fem}. Le couplage des deux fait émerger des questions théoriques nouvelles concernant l’équivalence des inerties entre les échelles micro et macro, particulièrement critiques dans les contextes hautement dynamiques comme les écoulements granulaires.
+    La méthode MPM, conçue à l’origine pour traiter des problèmes de contact liés au phénomène dynamique  \citep{nguyen2023material}, intègre naturellement les effets d’inertie. En revanche, la DEM tend à filtrer les réponses dynamiques en attendant une stabilisation statique  \citep{nguyen2014fem}. Le couplage des deux fait émerger des questions théoriques nouvelles concernant l’équivalence des inerties entre les échelles micro et macro, particulièrement critiques dans les contextes hautement dynamiques comme les écoulements granulaires.
 
-    \item \textbf{Conditions aux limites et conditions initiales:}  
-    L’implémentation actuelle des conditions aux limites périodiques dans la partie DEM reste imparfaite. Cette insuffisance engendre parfois des pics anormaux de contraintes, nuisant à la robustesse et à la représentativité des simulations.
+    \item \textbf{Conditions aux limites:}  
+    L’implémentation actuelle des conditions aux limites périodiques dans la partie DEM reste encore à perfectionner. Cette insuffisance engendre parfois des pics anormaux de contraintes, nuisant à la robustesse et à la représentativité des simulations.
 \end{itemize}
 
 
 
-\chapter{L'étude pratique}
+\chapter{Simulation numérique}
 
 \section{Simulation MPM – Déformation d'une poutre en console}
 
 Afin de valider la justesse de l’implémentation du programme MPM, une poutre en console encastrée, soumise à son propre poids (gravité), a été choisie comme cas test.  
 La simulation est d’abord effectuée avec une loi de comportement élastique de Hooke (loi de l’élasticité linéaire), et les résultats numériques sont comparés à la solution analytique issue de la résistance des matériaux.
 
+
 \begin{figure}[h]
-\centering
-\includegraphics[height=0.13\textheight]{Model_Poutre.png}
-\caption{Modèle de poutre encastrée en console}
-\label{fig:ModelPoutre}
+    \centering
+    \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.7\textwidth]{Model_Poutre.png}};
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            % Vẽ trục x
+            \draw[->,thick,red] (0.01,0.2) -- (0.4,0.2) node[right] {$x$};
+            % Vẽ trục y
+            \draw[->,thick,blue] (0.01,0.2) -- (0.01,0.4) node[above] {$y$};
+        \end{scope}
+    \end{tikzpicture}
+    \caption{Modèle de poutre encastrée en console}
+    \label{fig:ModelPoutre}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \small \scalebox{0.6}{\input{Deplacement_Poutre.tex}}
+    \scalebox{0.6}{\input{Deplacement_Poutre.tex}}
     \caption{Déplacement de la poutre selon l’axe vertical (Y).}
     \label{fig:deplacementPoutre}
 \end{figure}
@@ -167,25 +225,36 @@ $E$ est le module de Young (en Pa),
 $I$ est le moment d'inertie (en m\textsuperscript{4}),
 $L$ est la longueur totale de la poutre.
 
-On observe que la déformation obtenue par simulation numérique MPM est en bon accord avec la flèche calculée analytiquement selon l’équation \eqref{eq:fleche}, comme le montre la figure~\ref{fig:deplacementPoutre}.
+On observe que la déformation obtenue par simulation numérique MPM est en bon accord avec la flèche calculée analytiquement selon l'\autoref{eq:fleche}, comme le montre la \autoref{fig:deplacementPoutre}.
 
-Il est important de souligner que la longueur d'encastrement ainsi que la discrétisation du maillage dans le cadre de la MPM doivent être soigneusement ajustées à l’échelle géométrique du modèle étudié pour garantir une précision optimale.
+Il est important de souligner que la condition initiale: la longueur d'encastrement ainsi que la discrétisation du maillage dans le cadre de la MPM doivent être soigneusement ajustées à l’échelle géométrique du modèle étudié pour garantir une précision optimale.
 
 
 %\subsection{Étude sur le cas dynamique}
-
 
 
 \section{Simulation DEM: Compression triaxiale}
 
 \begin{figure}[h]
     \centering
-    \animategraphics[loop,autoplay,width=5cm]{10}{Triaxial_}{1}{8}
-    \caption{Déformation de l’échantillon dans la cellule triaxiale}
+    \begin{tikzpicture}
+        % Include the triaxial box image
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.5\textwidth]{Triaxial.png}};
+        % Overlay axes
+        \begin{scope}[x={(image.south east)},y={(image.north west)}]
+            % x-axis
+            \draw[->,thick,red] (0.7,0.14) -- (0.85,0.195) node[right] {$x$};
+            % y-axis
+            \draw[->,thick,blue] (0.7,0.14) -- (0.7,0.3) node[above] {$y$};
+            % z-axis (diagonal)
+            \draw[->,thick,green!70!black] (0.7,0.14) -- (0.8,0.04) node[below left] {$z$};
+        \end{scope}
+    \end{tikzpicture}
+    \caption{Boîte de déformation triaxiale utilisée pour la simulation DEM, avec repère $(x, y, z)$.}
     \label{fig:boiteDeformation}
 \end{figure}
 
-Dans cette section, nous réalisons une simulation de compression triaxial à l’aide de la méthode DEM, qui comprend deux étapes principales :
+Dans cette section, nous réalisons une simulation de compression triaxiale à l’aide de la méthode DEM, qui comprend deux étapes principales :
 
 \begin{itemize}
     \item \textbf{Préparation de l’échantillon:}  
@@ -193,7 +262,7 @@ Dans cette section, nous réalisons une simulation de compression triaxial à l�
     Cette étape permet de créer des échantillons de densités différentes (plus ou moins compactés), selon l’évolution du paramètre $\mu$.
 
     \item \textbf{Compression triaxiale:}  
-    L’échantillon préparé est ensuite soumis à une contrainte de confinement constant  selon les directions $x$ et $z$ (i.e. $\sigma_{xx} = \sigma_{zz}$). Une déformation axiale contrôlé  est imposée selon l’axe vertical $y$ — illustrée à la figure~\ref{fig:boiteDeformation}.  
+    L’échantillon préparé est ensuite soumis à une contrainte de confinement constant  selon les directions $x$ et $z$ (i.e. $\sigma_{xx} = \sigma_{zz}$). Une déformation axiale contrôlé  est imposée selon l’axe vertical $y$ — illustrée à la \autoref{fig:boiteDeformation}.  
     Une première série de simulations est menée en compactant lentement l’échantillon, afin d’analyser l’effet des conditions initiales (structure de l’échantillon) sur la réponse mécanique macroscopique.
 
     Ensuite, dans la perspective d’une intégration au couplage MPM$\times$DEM, une seconde étude est réalisée en augmentant la vitesse de déformation. Cela permet d’examiner l’influence du nombre l'inertie sur la réponse du matériau, en explorant une large gamme du nombre d’inerti  $I$ (de $10^{-6}$ à $10^{-2}$).
@@ -238,18 +307,17 @@ Dans cette section, nous réalisons une simulation de compression triaxial à l�
 La fraction solide caractérise la dispersion des particules solides $V_s$ dans un volume $V$.  
 C'est un indice important en rhéologie de l'écoulement.  
 \begin{equation}
-\Phi = \dfrac{V_s}{V} = \dfrac{\sum\limits_{i=1}^n \frac{4}{3}\pi R_i^3}{\det(h)}
+\Phi = \dfrac{V_s}{V}
 \end{equation}
 
 \begin{figure}[h!]
     \centering
-    \small
     \scalebox{0.5}{\input{fractonSolide.tex}}
-    \caption{La fraction solide}
+    \caption{La fraction solide. La courbe violette correspond à la moyenne expérimentale de 10 échantillons avec 10 coefficients de frottement différents ; la courbe verte correspond à une seule simulation numérique avec 10 coefficients de frottement décroissants.}
     \label{fig:fractionSolideMax}
 \end{figure}
 
-La \autoref{fig:fractionSolideMax} montre que la valeur maximale $\Phi_{\max}$ pour une dispersion désordonnée de sphères en contact dense est approximativement égale à 0.64~\citep{combe2023demlecture}.  
+La \autoref{fig:fractionSolideMax} montre que la valeur maximale $\Phi_{\max}$ pour une dispersion désordonnée de sphères en contact dense est approximativement égale à 0.64  \citep{combe2023demlecture}.  
 
 Un point important est que le paramètre $\mu$ augmente de 0 à 1 lors de la préparation des échantillons. Ceci correspond à une diminution progressive de la densité apparente, ce qui est confirmé par le graphique. En effet, plus $\mu$ est élevé, plus l’arrangement des grains devient difficile à organiser.
 
@@ -265,7 +333,6 @@ On peut exprimer le rapport $q/p$ par la relation suivante :
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \small
         \scalebox{0.5}{\input{Contrainte-Deformation.tex}}
         \caption{Contrainte-Déformation}
         \label{fig:contrainte}
@@ -273,7 +340,6 @@ On peut exprimer le rapport $q/p$ par la relation suivante :
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \small
         \scalebox{0.5}{\input{Deformation_Volumique.tex}}
         \caption{Déformation volumique}
         \label{fig:defvo}
@@ -284,9 +350,9 @@ On peut exprimer le rapport $q/p$ par la relation suivante :
 
 \begin{figure}[h!]
     \centering
-    \subfloat[Norme des forces]{\scalebox{0.33}{\small \input{Taux_ft_fn.tex}}\label{fig:palier_a}}
-    \subfloat[Indice des vides]{\scalebox{0.33}{\small \input{RapportVides.tex}}\label{fig:palier_b}}
-    \subfloat[Nombre de contacts]{\scalebox{0.33}{\small \input{NombreContacts.tex}}\label{fig:palier_c}}
+    \subfloat[Norme des forces]{\scalebox{0.33}{\input{Taux_ft_fn.tex}}\label{fig:palier_a}}
+    \subfloat[Indice des vides]{\scalebox{0.33}{\input{RapportVides.tex}}\label{fig:palier_b}}
+    \subfloat[Nombre de contacts]{\scalebox{0.33}{\input{NombreContacts.tex}}\label{fig:palier_c}}
     \caption{Tendance des grandeurs à l’état critique}
     \label{fig:Palier}
 \end{figure}
@@ -294,7 +360,7 @@ On peut exprimer le rapport $q/p$ par la relation suivante :
 Grâce aux courbes de contraintes (\autoref{fig:comparaison}), le comportement différencié des échantillons est désormais visible.  
 On observe que, pour différentes valeurs de $\mu$ en compression isotrope, on obtient des échantillons avec différentes compacités, ce qui conduit à des comportements très distincts.  
 
-Selon la \autoref{fig:Palier}, lorsque la déformation dépasse environ 8~\%, les courbes de la norme des forces, de l’indice des vides et du nombre de contacts (ou nombre de coordination) tendent progressivement vers un même palier.  
+Selon la \autoref{fig:Palier}, lorsque la déformation dépasse environ 8  \%, les courbes de la norme des forces, de l’indice des vides et du nombre de contacts (ou nombre de coordination) tendent progressivement vers un même palier.  
 Concernant la contrainte, le pic augmente avec la compacité du volume élémentaire (VE). Un VE très lâche ne présente pas de pic. Pour de grandes déformations, tous les échantillons tendent vers un même palier, appelé état critique.  
 
 Ces simulations confirment ainsi la théorie de l’état critique en mécanique des sols : une fois cet état atteint, la déformation plastique peut croître indéfiniment à contrainte et indice des vides constants.  
@@ -306,14 +372,14 @@ Cet état est celui utilisé pour la modélisation des écoulements.
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \scalebox{0.6}{\small \input{CercleMohr.tex}}
+        \scalebox{0.6}{\input{CercleMohr.tex}}
         \caption{Dense}
         \label{fig:cercle_dense}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \scalebox{0.65}{\small \input{LACHE_CercleMohr.tex}}
+        \scalebox{0.65}{\input{LACHE_CercleMohr.tex}}
         \caption{Lâche}
         \label{fig:cercle_lache}
     \end{subfigure}
@@ -333,14 +399,14 @@ Le cercle de Mohr est une méthode bien connue pour identifier la résistance au
 
 Le point quadrature gauche de chaque cercle sur la \autoref{fig:CercleDuMohr} correspond à la contrainte $\sigma_3$, tandis que le point droit représente la contrainte à l’état considéré.  
 
-Lors d’essais triaxiaux réalisés sur un même échantillon avec différentes valeurs de $\sigma_3$, plusieurs cercles peuvent être tracés. La droite tangente à ces cercles est la droite limite de Mohr-Coulomb, de la forme \eqref{eq:tangentMohr}.  
+Lors d’essais triaxiaux réalisés sur un même échantillon avec différentes valeurs de $\sigma_3$, plusieurs cercles peuvent être tracés. La droite tangente à ces cercles est la droite limite de Mohr-Coulomb, de la forme de l'\autoref{eq:tangentMohr}.  
 
 Nous nous intéressons ici à deux états importants : le pic et l’état critique.  
 Pour un échantillon donné, le pic correspond à la contrainte maximale avant rupture par cisaillement.  
 La pente de la droite tangente aux cercles, soit $\tan(\varphi) = \mu$, reflète le frottement interne à l’état considéré.  
 
 La \autoref{fig:CercleDuMohr} donne la valeur de $\mu_{\text{transitoire}}$ au pic, c’est-à-dire lorsque la résistance au cisaillement due aux contacts frottants entre grains est maximale.  
-Naturellement, un sol dense (figure \ref{fig:cercle_dense}) présente un angle de frottement $\varphi$ plus élevé qu’un sol lâche (figure \ref{fig:cercle_lache}).  
+Naturellement, un sol dense (\autoref{fig:cercle_dense}) présente un angle de frottement $\varphi$ plus élevé qu’un sol lâche (\autoref{fig:cercle_lache}).  
 
 Le $\mu_{\text{résiduel}}$ correspond à la pente de la droite tangente au cercle de Mohr à l’état critique.  
 On considère généralement que ce $\mu_{\text{résiduel}}$ est une valeur stationnaire.  
@@ -350,7 +416,7 @@ il subit des déformations très importantes, la structure initiale est totaleme
 
 Dans notre cas, le matériau étudié est du sable sec. Le point d’intersection entre la droite tangente aux cercles et l’axe vertical, selon la théorie, doit être nul, ce qui correspond à une cohésion nulle ($c=0$).
 
-\subsection{Recherche sur l'impact dynamique}
+\subsection{Recherche sur l'impact dynamique} \label{sec:dynamique}
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -368,32 +434,32 @@ Dans cette section, nous étudions le nombre d’inertie, qui est un verrou ment
 L’augmentation du nombre d’inertie dans un essai triaxial correspond à une augmentation de la vitesse imposée.  
 Normalement, la valeur recommandée de $I$ pour les expériences DEM dans le cadre expérimental est $I < 10^{-7}$.  
 Cependant, en simulation, cette valeur est pratiquement inatteignable en raison du coût temporel élevé.  
-Ainsi, le tableau \ref{tab:nombreInertie} présente les valeurs recommandées par le comité de modélisation des sols.  
+Ainsi, le \autoref{tab:nombreInertie} présente les valeurs recommandées par le comité de modélisation des sols.  
 Lors de la réalisation d’un essai triaxial numérique, pour atteindre un état quasi-statique, on choisit généralement $I < 10^{-3}$.  
 À ce stade, le tenseur des contraintes est symétrique et les composantes $\sigma_{xx}$ ou $\sigma_{zz}$ sont approximativement stables et proches de la contrainte de confinement imposée.  
 Cependant, dans l’objectif de modéliser un écoulement, nous nous intéressons à des valeurs de $I$ plus élevées, comprises entre $10^{-3}$ et $10^{-1}$, afin d’obtenir un comportement fluide.
 
 \begin{figure}[h!]
-\centering \small
+\centering
 \scalebox{0.5}{\input{10-2.tex}}
 \caption{Réponses macroscopiques des essais triaxiaux rapides ($I \approx 10^{-2}$)}
 \label{fig:contrainteRapide}
 \end{figure}
 
-La figure~\ref{fig:contrainteRapide} montre clairement que plus le nombre d’inertie est élevé, plus le pic de contrainte est marqué et plus la contrainte de confinement présente de fortes fluctuations.  
+La \autoref{fig:contrainteRapide} montre clairement que plus le nombre d’inertie est élevé, plus le pic de contrainte est marqué et plus la contrainte de confinement présente de fortes fluctuations.  
 En utilisant ces valeurs, nous traçons les cercles de Mohr comme suit :
 
 \begin{figure}[htbp]
-    \centering \small
+    \centering
     \begin{subfigure}[b]{0.49\textwidth}
-        \centering \small
+        \centering
         \scalebox{0.5}{\input{Cohesion_Critique.tex}}
         \caption{À l’état critique}
         \label{fig:muresiduel}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
-        \centering \small
+        \centering
         \scalebox{0.5}{\input{Cohesion.tex}}
         \caption{Au pic}
         \label{fig:mutransitore}
@@ -402,13 +468,13 @@ En utilisant ces valeurs, nous traçons les cercles de Mohr comme suit :
     \label{fig:CercleDuMohrRapide}
 \end{figure}
 
-Malheureusement, bien que les tangentes aux cercles de Mohr se confondent, la cohésion selon la condition de Mohr (figure \ref{fig:CercleDuMohrRapide}) au pic n’est pas nulle.  
+Malheureusement, bien que les tangentes aux cercles de Mohr se confondent, la cohésion selon la condition de Mohr (\autoref{fig:CercleDuMohrRapide}) au pic n’est pas nulle.  
 Cela constitue un verrou identifié dans la thèse, lié à un problème des conditions aux limites périodiques. Ce problème est actuellement en cours de résolution.  
 Entre-temps, l’état critique donne une cohésion proche de zéro ($c \approx 0$), ce qui nous permet d’utiliser la rhéologie $\mu(I)$ afin de préparer le couplage avec le modèle d’écoulement.
 
-\section{Rhéologie $\mu(I)$ résiduelle}
+\subsection{Rhéologie $\mu(I)$ résiduelle}
 
-La rhéologie $\mu(I)$ joue un rôle crucial dans la description des écoulements granulaires. Elle établit une relation constitutive entre le tenseur des contraintes du flux et le tenseur des taux de déformation~\citep{jop2006constitutive} :
+La rhéologie $\mu(I)$ joue un rôle crucial dans la description des écoulements granulaires. Elle établit une relation constitutive entre le tenseur des contraintes du flux et le tenseur des taux de déformation  \citep{jop2006constitutive} :
 \begin{equation}
 \sigma_{ij} = -P \delta_{ij} + \mu(I) P \frac{\dot{\gamma}_{ij}}{\lVert \dot{\gamma} \rVert}
 \label{flowTensor}
@@ -432,21 +498,21 @@ Les coefficients $\mu_s$, $\mu_2$, $I_0$, $\Phi_{\max}$, et $b$ sont déterminé
 
 \begin{figure}[h!]
     \centering
-    \subfloat[Contrainte–Déformation]{\scalebox{0.49}{\small \input{Test.tex}}\label{fig:etudeSurI1}}
-    \subfloat[Cercles résiduels]{\scalebox{0.49}{\small \input{Résiduel.tex}}\label{fig:cercleResiduel1}}
+    \subfloat[Contrainte–Déformation]{\scalebox{0.49}{\input{Test.tex}}\label{fig:etudeSurI1}}
+    \subfloat[Cercles résiduels]{\scalebox{0.49}{\input{Résiduel.tex}}\label{fig:cercleResiduel1}}
   \caption{Influence du nombre d’inertie sur la condition de Mohr-Coulomb}
   \label{fig:IResiduel}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
-    \subfloat[$\mu(I)$]{\scalebox{0.49}{\small \input{mu_I_fit.tex}}\label{fig:etudeSurI2}}
-    \subfloat[$\Phi(I)$]{\scalebox{0.49}{\small \input{Pack_I_fit.tex}}\label{fig:cercleResiduel2}}
+    \subfloat[$\mu(I)$]{\scalebox{0.49}{\input{mu_I_fit.tex}}\label{fig:etudeSurI2}}
+    \subfloat[$\Phi(I)$]{\scalebox{0.49}{\input{Pack_I_fit.tex}}\label{fig:cercleResiduel2}}
   \caption{Étude de la rhéologie à l’état critique}
   \label{fig:Rheologie}
 \end{figure}
 
-La petite plage de l’axe des ordonnées de la figure~\ref{fig:Rheologie} indique que les valeurs suivent une tendance cohérente.
+La petite plage de l’axe des ordonnées de la \autoref{fig:Rheologie} indique que les valeurs suivent une tendance cohérente.
 
 \chapter{Conclusion}
 
@@ -458,7 +524,7 @@ L’encadrement rigoureux de mes directeurs de thèse m’a permis d’approfond
 Les travaux réalisés ont validé la robustesse des outils numériques développés, notamment dans le cadre de simulations quasi-statiques. Cependant, certaines limitations persistent, notamment en ce qui concerne la gestion des conditions aux limites dans le couplage MPM-DEM, qui demeure un défi majeur pour la modélisation précise des écoulements granulaires dynamiques. Ce verrou scientifique a été clairement identifié et fait l’objet de développements méthodologiques en cours.
 
 Les perspectives pour la suite de la thèse incluent l’amélioration du couplage entre les deux codes, l’intégration des lois de comportement adaptées à l’état critique, ainsi que la réalisation de simulations à plus grande échelle afin de mieux représenter les phénomènes naturels étudiés.
-Je tiens à exprimer ma profonde gratitude à mes encadrants pour leur soutien constant et leurs conseils avisés. Enfin, je reste attentif aux remarques et suggestions du comité du CSI, qui seront précieux pour la poursuite et la réussite de ce travail de recherche.
+
 
 \bibliographystyle{apalike}
 \bibliography{Bibliographie}
