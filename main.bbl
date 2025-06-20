@@ -12,6 +12,12 @@ Danies, F.~G. (2018).
   ph{\'e}nom{\`e}nes gravitaires}.
 \newblock PhD thesis, Universit{\'e} Grenoble Alpes (ComUE).
 
+\bibitem[Duverger, 2023]{duverger2023multi}
+Duverger, S. (2023).
+\newblock {\em A multi-scale, MPMxDEM, numerical modelling approach for
+  geotechnical structures under severe loading}.
+\newblock PhD thesis, Aix-Marseille Universit{\'e} (AMU).
+
 \bibitem[Jop et~al., 2006]{jop2006constitutive}
 Jop, P., Forterre, Y., and Pouliquen, O. (2006).
 \newblock A constitutive law for dense granular flows.
@@ -29,10 +35,29 @@ Nguyen, T.~K., Combe, G., Caillerie, D., and Desrues, J. (2014).
   homogenisation and multi-scale simulations.
 \newblock {\em Acta Geophysica}, 62:1109--1126.
 
+\bibitem[Nguyen et~al., 2024]{Nguyen09092024}
+Nguyen, T.-K., Desrues, J., Vo, T.-T., and and, G.~C. (2024).
+\newblock Macro-micro analysis of ground response to circular tunnel excavation
+  in granular media.
+\newblock {\em European Journal of Environmental and Civil Engineering},
+  28(12):2862--2880.
+
 \bibitem[Nguyen et~al., 2023]{nguyen2023material}
 Nguyen, V.~P., De~Vaucorbeil, A., and Bordas, S. (2023).
 \newblock The material point method.
 \newblock {\em Cham: Springer International Publishing}.
+
+\bibitem[Ozenda et~al., 2025]{Ozenda2025Inertia}
+Ozenda, O., Chambon, G., Combe, G., and Richefeu, V. (2025).
+\newblock Exploring inertial effects in the flow of granular media:
+  double-scale approach mpm×dem.
+\newblock {\em International Journal of Computational Methods in Engineering
+  Science and Mechanics}, XX(YY):pp--pp.
+
+\bibitem[Radjai and Dubois, 2011]{radjai2011discrete}
+Radjai, F. and Dubois, F. (2011).
+\newblock {\em Discrete-element modeling of granular materials}.
+\newblock Wiley-Iste.
 
 \bibitem[Richefeu and Combe, 2025]{richefeu2025mpmxdem}
 Richefeu, V. and Combe, G. (2025).

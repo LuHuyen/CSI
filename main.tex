@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{report}
 \usepackage[T1]{fontenc} 
-\usepackage[british, main = french]{babel}
+\usepackage[main = french, british]{babel}
 
 \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
@@ -34,10 +34,11 @@
     \usepackage{listings}      % insert source code \eg LaTeX and Python codes 
     \usepackage{algorithm}     % flow wrapper for algorithm
     \usepackage{algpseudocode} % second algorithm typesetting environment
-    \usepackage{nicefrac} 
+    \usepackage{nicefrac} %\nicefrac{num}{den}
         \usepackage{numprint}             % \numprint{10000} => 10 000 not 10000
+        \definecolor{darkgray}{rgb}{0.95, 0.95, 0.95} % color used in tables
     \usepackage[title,titletoc,toc]{appendix}
-\usepackage[french,english]{cleveref} %Basically, cleveref must be loaded last.
+\usepackage[french, english]{cleveref} %Basically, cleveref must be loaded last.
 % \autorefname{figure}{\textcolor{blue}{la figure}}{\textcolor{blue}{les figures}}
 % \autorefname{figure}{\textcolor{blue}{La figure}}{\textcolor{blue}{Les figures}}
 % \autorefname{table}{\textcolor{blue}{le tableau}}{\textcolor{blue}{les tableaux}}
@@ -64,6 +65,8 @@
 \renewcommand{\sectionautorefname}{section}
 \renewcommand{\subsectionautorefname}{sous-section}
 \renewcommand{\equationautorefname}{équation}
+
+
 \title{Rapport d'activités -- 1\textsuperscript{ère} année}
 \author{Viet Anh QUACH}
 \begin{document}
@@ -250,7 +253,7 @@ Il est important de souligner que la condition initiale: la longueur d'encastrem
             \draw[->,thick,green!70!black] (0.7,0.14) -- (0.8,0.04) node[below left] {$z$};
         \end{scope}
     \end{tikzpicture}
-    \caption{Boîte de déformation triaxiale utilisée pour la simulation DEM, avec repère $(x, y, z)$.}
+    \caption{Boîte de déformation triaxiale utilisée pour la simulation DEM}
     \label{fig:boiteDeformation}
 \end{figure}
 
@@ -298,6 +301,31 @@ Dans cette section, nous réalisons une simulation de compression triaxiale à l
 % \caption{Paramètres utilisés pour la simulation de compression triaxiale}
 % \label{tab:parametre}
 % \end{table}
+
+%  \begin{table*}[h!]
+%       \centering
+%       \caption{Material parameters and characteristics for all simulations.}
+%       \setlength\fboxsep{0pt}
+%       \vskip-\topsep%
+%       \smallskip%
+%       \renewcommand\arraystretch{1.4}
+%       \colorbox{darkgray}{%
+%       \begin{tabularx}{0.7\textwidth}{lll}
+%       \toprule
+%       Parameter                & Section 5.1     & Section 5.2     \\
+%       \midrule
+%       Young's modulus [MPa]    & $210\times10^3$ & 145            \\
+%       Poisson's ratio [-]      & 0.3             & 0.45            \\
+%       Tensile strength [MPa]   & 2445            & 20              \\
+%           \midrule 
+%       Experimentally validated & n/a             & n/a            \\
+%       Solver                   & multi-step AM   & single-step AM implicit-explicit \\
+%       State                    & Plane strain    & Plane strain    \\
+%        \bottomrule
+%        \end{tabularx}%
+%       }
+%       \label{table:params}
+%       \end{table*}
 
 
 \subsection{Les caractéristiques mécaniques générales du sol}

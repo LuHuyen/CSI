@@ -1,0 +1,39 @@
+\documentclass{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[danish,french,main=british]{babel}
+\usepackage[danish,french,english]{cleveref}
+\usepackage{graphicx}
+
+\begin{document}
+
+\chapter{Test}
+\label{chap-test}
+
+\Cref{chap-test}
+
+\foreignlanguage{danish}{\Cref{chap-test}}
+
+\foreignlanguage{french}{\Cref{chap-test}}
+
+
+
+\chapter{Étude bibliographique}
+\section{Introduction de la thèse}
+A
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.35\textwidth]{DEM.jpg}
+\caption{Deux grains i et j en contact}
+\label{fig:contactDEM}
+\end{figure}
+
+
+
+test cref \cref{fig:contactDEM}
+\bibliographystyle{apalike}
+\bibliography{Bibliographie}
+
+\end{document}
+
+
