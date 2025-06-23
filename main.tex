@@ -97,7 +97,6 @@ La Méthode des Points Matériels (MPM) est une méthode numérique hybride comb
 Dans le cadre de cette thèse, on utilise la variante dite Updated Lagrangian MPM (ULMPM). Cette approche repose sur un maillage de fond constitué de n\oe uds fixes, à travers lequel se déplace le milieu granulaire. En pratique, les n\oe uds du maillage sont déplacés pendant chaque pas de temps pour les calculs intermédiaires, puis réinitialisés à leur position d’origine à la fin de chaque itération. Cela permet de considérer le maillage comme étant eulérien, dans la mesure où il ne subit jamais de distorsion permanente au cours de la simulation.
 Le matériau granulaire est discrétisé en points matériels, chacun représentant un volume du matériau et transportant l’ensemble de ses propriétés physiques (masse, position, vitesse, contraintes, variables internes nécessaires aux lois de comportement, etc.). Ces points suivent un cadre lagrangien, fournissant une description de l’état des particules à tout instant \citep{danies2018application}.
 L’algorithme de base de l’ULMPM se décompose en quatre étapes principales:
-
 \begin{enumerate}
   \item À l’instant $t$, les informations des particules (points matériels) sont transférées aux n\oe uds de leur cellule d’influence dans le maillage.
   \item L’équation du torseur est résolue aux n\oe uds ; les propriétés nodales (position, vitesse, accélération, forces) sont mises à jour.
@@ -401,6 +400,25 @@ Cet état est celui utilisé pour la modélisation des écoulements.
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \scalebox{0.6}{\input{CercleMohr.tex}}
+        \caption{Dense}
+        \label{fig:cercle_dense}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \scalebox{0.65}{\input{LACHE_CercleMohr.tex}}
+        \caption{Lâche}
+        \label{fig:cercle_lache}
+    \end{subfigure}
+    \caption{Cercles de Mohr: les cercles bleu, rouge et vert représentent respectivement $\sigma_3 = 100, 200, 300$ kPa}
+    \label{fig:CercleDuMohr}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \scalebox{0.6}{\input{Statique_CercleMohr}}
         \caption{Dense}
         \label{fig:cercle_dense}
     \end{subfigure}

@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex main"] 1750400626 "main.aux" "main.bbl" "main" 1750402151
+["bibtex main"] 1750683673 "main.aux" "main.bbl" "main" 1750684120
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "Bibliographie.bib" 1750260862 4595 d92268fb3ac0b43ca30f723f80c6acae ""
-  "main.aux" 1750402150 16761 65fdc0d8fb382feb5f1700ac6e20721d "pdflatex"
+  "main.aux" 1750684120 17823 a05a503153af5ef5a4f671e581397280 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1750402148 "/home/3S-LAB/vquach/Documents/CSI/main.tex" "main.pdf" "main" 1750402151
+["pdflatex"] 1750684118 "/home/3S-LAB/vquach/Documents/CSI/main.tex" "main.pdf" "main" 1750684120
   "/etc/texmf/web2c/texmf.cnf" 1744902076 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/3S-LAB/vquach/Documents/CSI/main.tex" 1750402148 33690 88f8bfc20310a0ff587915afaa9f3952 ""
+  "/home/3S-LAB/vquach/Documents/CSI/main.tex" 1750683663 35274 c0314334fb7d9d3760564a132eca5206 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -334,8 +334,8 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1744902183 2800894 e1baa7a011d60355569411339b9baebc ""
   "10-2.eps" 1747908832 123024 a6809c6359127a15b772b467347a4a6a ""
   "10-2.tex" 1750229610 6040 59af96f0e05a864b3015c6caf3e09280 ""
-  "CercleMohr.eps" 1743658712 24735 ad831629aff0e750bd587b3f37db7942 ""
-  "CercleMohr.tex" 1743658706 4726 50bdeb3d185afe434d5b37e9f0ece2ff ""
+  "CercleMohr.eps" 1750431112 24288 f62f34215a8b06ce5e18ee578f7802f6 ""
+  "CercleMohr.tex" 1750682101 4954 555ffe2e4a9deb24ca1a875d96f34756 ""
   "Cohesion.eps" 1747908832 22541 0657db7a7c7e91837a57f27178afa966 ""
   "Cohesion.tex" 1750231086 4694 2bd975a348de3d4d6b00018edbc37476 ""
   "Cohesion_Critique.eps" 1747909425 22839 d68ba48aa0603b526961ed876f79afcf ""
@@ -359,6 +359,8 @@
   "RapportVides.tex" 1743658706 5312 5f11264fbe7577b03b84d9e7624aee04 ""
   "Résiduel.eps" 1748439145 32304 d10afa5a3dcbda66928edf7785bd18f7 ""
   "Résiduel.tex" 1748439145 5121 01673eaaf94059691d49bb2119a4f76b ""
+  "Statique_CercleMohr.eps" 1750684095 21436 70ac74493e01633cdf7e8ca0ea36165b ""
+  "Statique_CercleMohr.tex" 1750684095 4472 ee1d33bda6bfdb7480e2beee93a613f7 ""
   "Taux_ft_fn.eps" 1743658712 52887 06c2c98e6f2e1eae188ee865159d1b25 ""
   "Taux_ft_fn.tex" 1743658706 5339 92fed38582b6cd6ea5f4ad08c5da0478 ""
   "Test.eps" 1748439144 336512 ef8b76ccff6af7071aa4a52848bcd4aa ""
@@ -366,12 +368,12 @@
   "Triaxial.png" 1750263277 548224 3a574959cd8b318b913660e6894db963 ""
   "fractonSolide.eps" 1750087444 22016 523c41ee02830fd6c76b68c28ef65dd5 ""
   "fractonSolide.tex" 1750087444 5341 03d516c21108610f2e993e8cf37ef7ee ""
-  "main.aux" 1750402150 16761 65fdc0d8fb382feb5f1700ac6e20721d "pdflatex"
-  "main.bbl" 1750400626 2745 5f4b38ebaf4463896ccc8ca8360e42f9 "bibtex main"
-  "main.brf" 1750402150 699 2f4b4ff952a6e8933cf7b10bcbde0358 "pdflatex"
-  "main.out" 1750402150 2567 be6fa601d511cb30fe3d267c182196fc "pdflatex"
-  "main.tex" 1750402148 33690 88f8bfc20310a0ff587915afaa9f3952 ""
-  "main.toc" 1750402150 1432 b7711c7efe4940d366ca58f6359121a6 "pdflatex"
+  "main.aux" 1750684120 17823 a05a503153af5ef5a4f671e581397280 "pdflatex"
+  "main.bbl" 1750683673 2745 5f4b38ebaf4463896ccc8ca8360e42f9 "bibtex main"
+  "main.brf" 1750684120 699 9fbce223eb94d0ab8dc626aba0d8e5f7 "pdflatex"
+  "main.out" 1750684120 2567 be6fa601d511cb30fe3d267c182196fc "pdflatex"
+  "main.tex" 1750683663 35274 c0314334fb7d9d3760564a132eca5206 ""
+  "main.toc" 1750684120 1431 3d515786afefbb86832b130b8ecfe40e "pdflatex"
   "mu_I_fit.eps" 1748872556 20978 986de2745b28694ed29c9c1cf217037f ""
   "mu_I_fit.tex" 1748872556 5254 bfab1529f07909bbc88522d249881a23 ""
   (generated)
